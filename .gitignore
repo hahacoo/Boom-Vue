@@ -1,0 +1,9 @@
+*.o
+# amd/
+# bower_components/
+node_modules/
+
+# gulp intermediate storage 
+static/js/bower_components/
+static/js/gulp/node_modules/
+
