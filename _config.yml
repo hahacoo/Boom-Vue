@@ -1,0 +1,16 @@
+# app配置
+name: awesome_app
+title: awesome_app
+
+# 模板引擎
+views: views/ejs
+engine: ejs
+
+# 端口号
+port: 3000
+
+# proxy
+proxy:
+  enable: false
+  baseUrl: /app
+  target: localhost:4000

@@ -1,0 +1,17 @@
+<header class="container-header">
+	<div class="container">
+		<section class="header-title">
+			<span @click="home">STI-VUE</span>
+		</section>
+		<nav class="header-config">
+			<ul>
+				<li>
+					<label @click="exhibition" :class="{'active-menu': globalApp == 'exhibition'}">组件</label>
+				</li>
+				<li>
+					<label @click="introduce" :class="{'active-menu': globalApp == 'introduce'}">关于</label>
+				</li>
+			</ul>
+		</nav>
+	</div>
+</header>
