@@ -1,0 +1,26 @@
+<section id="{{title}}" class="doc-section">
+
+    <!-- 标题区-->
+    <h1 class="page-header" id="transitions"><a class="anchorjs-link " href="#transitions"></a>{{title}} 
+        <small>
+            {{subTitle}} 
+        </small>
+    </h1>
+
+    <!-- 描述区-->
+    <div class="doc-description">
+        <slot name="description">
+            
+        </slot>
+    </div>
+
+    <!-- 展示区-->
+    <div class="doc-example">
+        <slot name="example">
+        
+        </slot>
+    </div>
+
+    <!-- 其他-->
+    <slot></slot>
+</section>

@@ -1,0 +1,6 @@
+<nav class="sti-menu" :class="{'sti-menu-horiz': direction == 'horizontal', 'sti-horiz-rgt': direction == 'horizontal' && rgt}" v-el:panel>
+	<div class="sti-menu-title" v-if="direction != 'horizontal'">{{appName}}</div>
+	<ul v-if="!minMenu" class="sti-menu-content">
+		<menu-item v-for='child in children' :model='child' :direction='direction'></menu-item>
+	</ul>
+</nav>
