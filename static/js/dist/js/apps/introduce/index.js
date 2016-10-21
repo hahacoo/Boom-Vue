@@ -1,4 +1,4 @@
-define(['exports', 'text!./view.html', 'bases/mixins/appMixin'], function (exports, _view, _appMixin) {
+define(['exports', 'text!./view.html', 'bases/mixins/appMixin', 'css!./style.css'], function (exports, _view, _appMixin) {
     'use strict';
 
     Object.defineProperty(exports, "__esModule", {

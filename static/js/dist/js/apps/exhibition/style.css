@@ -13,11 +13,11 @@
   padding: 2px 20px;
 }
 .exhibition .nav-fix ul li:hover {
-  box-shadow: inset 4px 0 0 -3px #42D28D;
+  box-shadow: inset 4px 0 0 -3px #41b883;
 }
 .exhibition .nav-fix ul li.active {
   font-weight: bold;
-  box-shadow: inset 6px 0 0 -3px #42D28D;
+  box-shadow: inset 6px 0 0 -3px #41b883;
 }
 .exhibition .nav-fix ul li a {
   color: inherit;

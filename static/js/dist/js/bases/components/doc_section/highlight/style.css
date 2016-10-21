@@ -1,9 +1,0 @@
-.pre-hl-container {
-  position: relative;
-}
-.pre-hl-container > .pre-hl-label {
-  color: #ddd;
-  position: absolute;
-  top: 5px;
-  right: 10px;
-}

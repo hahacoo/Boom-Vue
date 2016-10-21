@@ -101,7 +101,7 @@ input {
 }
 .container-header {
   height: 60px;
-  background-color: #42D28D;
+  background-color: #41b883;
   line-height: 60px;
   margin-top: -60px;
   position: relative;
@@ -111,7 +111,7 @@ input {
   width: 220px;
   height: 60px;
   display: inline-block;
-  background-color: #42D28D;
+  background-color: #41b883;
   float: left;
   position: relative;
   z-index: 1;
@@ -128,7 +128,7 @@ input {
   color: #fff;
   margin: 12px 0;
   border-radius: 4px;
-  background-color: #42D28D;
+  background-color: #41b883;
   box-shadow: 1px 1px 1px 1px #2A2D34;
   display: inline-block;
   transform: translate(50%, 0);
@@ -225,7 +225,13 @@ input {
 }
 .container-home > .banner {
   height: 400px;
-  background-image: linear-gradient(to bottom, #42D28D, #c4fdd5);
+  background-image: linear-gradient(to bottom, #41b883, #c4fdd5);
+}
+.container-home > .banner > h1 {
+  height: 400px;
+  line-height: 400px;
+  color: #fff;
+  text-align: center;
 }
 .container-home > .home {
   font-size: 24px;
@@ -732,12 +738,12 @@ pre {
   min-width: 300px;
   height: 200px;
   display: inline-block;
-  border: 1px solid #42D28D;
+  border: 1px solid #41b883;
   margin: 0 10px 25px 0;
 }
 .dashboard-container > .dashboard-panel > .dashboard-title {
   padding: 6px;
-  background: #42D28D;
+  background: #41b883;
 }
 .dashboard-container > .dashboard-panel > .dashboard-title > span {
   display: inline-block;
@@ -782,6 +788,18 @@ pre {
   text-transform: uppercase;
   letter-spacing: 1px;
   content: "STI-DEMO";
+}
+.doc-highlight {
+  position: relative;
+}
+.doc-highlight > .highlight-label {
+  color: #ddd;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+.doc-highlight .hljs {
+  background: #35495e;
 }
 
 /*# sourceMappingURL=map/sti.css.map */
