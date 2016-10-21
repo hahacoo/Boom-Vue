@@ -3,6 +3,7 @@ import template from 'text!./view.html';
 import appMixin from 'bases/mixins/appMixin';
 import docSection from 'bases/components/doc_section/index';
 import scrollspy from 'module/scrollspy/index';
+import { modal, modalheader, modalbody, modalfooter } from 'module/modal/index';
 
 import Vue from 'vue';
 
@@ -13,7 +14,9 @@ export default {
             defaultView: '',
             activeId: 'fat',
             demos: [],
-            demoId: ''
+            demoId: '',
+
+            isModalShow: false
         }
     },
 
@@ -22,7 +25,11 @@ export default {
     mixins: [appMixin],
 
     components: {
-        scrollspy
+        scrollspy,
+        modal,
+        modalheader,
+        modalbody,
+        modalfooter
     },
 
     created (){
@@ -33,5 +40,11 @@ export default {
         this.$on('section.attach', function(id) {
             this.demos.push(id)
         })
+    },
+
+    methods: {
+        showModal: function() {
+            this.isModalShow = !this.isModalShow;
+        }
     }
 };

@@ -1,4 +1,4 @@
-define(['exports', 'text!./view.html', 'bases/mixins/appMixin', 'bases/components/doc_section/index', 'module/scrollspy/index', 'vue', 'css!./style.css'], function (exports, _view, _appMixin, _index, _index3, _vue) {
+define(['exports', 'text!./view.html', 'bases/mixins/appMixin', 'bases/components/doc_section/index', 'module/scrollspy/index', 'module/modal/index', 'vue', 'css!./style.css'], function (exports, _view, _appMixin, _index, _index3, _index5, _vue) {
     'use strict';
 
     Object.defineProperty(exports, "__esModule", {
@@ -28,7 +28,9 @@ define(['exports', 'text!./view.html', 'bases/mixins/appMixin', 'bases/component
                 defaultView: '',
                 activeId: 'fat',
                 demos: [],
-                demoId: ''
+                demoId: '',
+
+                isModalShow: false
             };
         },
 
@@ -37,7 +39,11 @@ define(['exports', 'text!./view.html', 'bases/mixins/appMixin', 'bases/component
         mixins: [_appMixin2.default],
 
         components: {
-            scrollspy: _index4.default
+            scrollspy: _index4.default,
+            modal: _index5.modal,
+            modalheader: _index5.modalheader,
+            modalbody: _index5.modalbody,
+            modalfooter: _index5.modalfooter
         },
 
         created: function created() {
@@ -48,6 +54,13 @@ define(['exports', 'text!./view.html', 'bases/mixins/appMixin', 'bases/component
             this.$on('section.attach', function (id) {
                 this.demos.push(id);
             });
+        },
+
+
+        methods: {
+            showModal: function showModal() {
+                this.isModalShow = !this.isModalShow;
+            }
         }
     };
 });

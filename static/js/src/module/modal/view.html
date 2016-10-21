@@ -1,0 +1,9 @@
+<div class="sti-modal" @click="clickBlank" v-if="ifShow" transition="expand">
+    <div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<slot name="header"></slot>
+			<slot name="body"></slot>
+			<slot name="footer"></slot>
+		</div>
+	</div>
+</div>
