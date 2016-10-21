@@ -1,3 +1,4 @@
+import 'css!./style.css'
 import template from 'text!./view.html';
 import appMixin from 'bases/mixins/appMixin';
 
