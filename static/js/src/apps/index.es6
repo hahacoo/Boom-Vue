@@ -6,11 +6,10 @@ import template from 'text!./view.html';
 import routerMixin from 'bases/mixins/routerMixin';
 import 'dist/js/config/index';
 
-import scrollspy from 'bases/components/scrollspy/index';
+import scrollspy from 'module/scrollspy/index';
 import menu from 'bases/components/menu/index';
 import appHeader from 'bases/components/header/index';
 import filters from 'bases/filters/index';
-import directives from 'bases/directives/highlight/index';
 
 import Vue from 'vue';
 import $ from 'jquery';

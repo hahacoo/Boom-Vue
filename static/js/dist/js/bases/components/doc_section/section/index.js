@@ -16,10 +16,30 @@ define(['exports', 'text!./view.html', 'bases/mixins/compMixin'], function (expo
     }
 
     exports.default = {
+        data: function data() {
+            return {};
+        },
+
+        props: {
+            title: {
+                type: String,
+                required: true
+            },
+
+            subTitle: {
+                type: String,
+                required: true
+            }
+        },
 
         template: _view2.default,
 
-        mixins: [_compMixin2.default]
+        mixins: [_compMixin2.default],
 
+        ready: function ready() {
+            //创建完成之后，通知根节点
+
+            this.$dispatch("section.attach", this.title);
+        }
     };
 });

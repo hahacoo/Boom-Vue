@@ -4,7 +4,8 @@ require.config({
     paths: {
         bases:  'dist/js/bases',
         components: 'dist/js/components',
-        core: 'dist/js/core'
+        core: 'dist/js/core',
+        module: 'dist/js/module'
     },
     
     shim: {},

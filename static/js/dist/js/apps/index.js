@@ -1,4 +1,4 @@
-define(['exports', 'text!./view.html', 'bases/mixins/routerMixin', 'bases/components/scrollspy/index', 'bases/components/menu/index', 'bases/components/header/index', 'bases/filters/index', 'bases/directives/highlight/index', 'vue', 'jquery', 'dist/js/config/index'], function (exports, _view, _routerMixin, _index, _index3, _index5, _index7, _index9, _vue, _jquery) {
+define(['exports', 'text!./view.html', 'bases/mixins/routerMixin', 'module/scrollspy/index', 'bases/components/menu/index', 'bases/components/header/index', 'bases/filters/index', 'vue', 'jquery', 'dist/js/config/index'], function (exports, _view, _routerMixin, _index, _index3, _index5, _index7, _vue, _jquery) {
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
@@ -17,8 +17,6 @@ define(['exports', 'text!./view.html', 'bases/mixins/routerMixin', 'bases/compon
 
 	var _index8 = _interopRequireDefault(_index7);
 
-	var _index10 = _interopRequireDefault(_index9);
-
 	var _vue2 = _interopRequireDefault(_vue);
 
 	var _jquery2 = _interopRequireDefault(_jquery);
@@ -29,10 +27,6 @@ define(['exports', 'text!./view.html', 'bases/mixins/routerMixin', 'bases/compon
 		};
 	}
 
-	/**
-  * App根组件
-  * 功能：负责主视图切换、错误页面处理
-  */
 	var app = new _vue2.default({
 
 		el: 'body',
@@ -107,7 +101,9 @@ define(['exports', 'text!./view.html', 'bases/mixins/routerMixin', 'bases/compon
 
 			_vue2.default.use(_index8.default);
 		}
-	});
-
+	}); /**
+      * App根组件
+      * 功能：负责主视图切换、错误页面处理
+      */
 	exports.default = app;
 });

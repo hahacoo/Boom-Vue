@@ -34,29 +34,30 @@
                             </scrollspy>
                         </div>
                         <!-- 代码或者其他api注释-->
-                        <pre-highlight type="html">
+                        <doc-highlight type="html">
                             <!-- 需要高亮显示的部分如果是自定义组件，受vue解析顺序的影响，要使用v-pre阻止vue解析，才能保证显示-->
-        <nav class="navbar navbar-default navbar-static" v-pre>
-            <div class="container-fluid">
-                <label class="navbar-brand">ScrollSpy Demo</label>
-                <div class="collapse navbar-collapse bs-example-js-navbar-scrollspy">
-                    <ul class="nav navbar-nav">
-                        <li :class="{active: activeId== 'fat'}"><a href="#fat">@fat</a></li>
-                        <li :class="{active: activeId== 'mdo'}"><a href="#mdo">@mdo</a></li>
-                        <li :class="{active: activeId== 'one'}"><a href="#one">@one</a></li>
-                    </ul>
-                </div>
+    <nav class="navbar navbar-default navbar-static" v-pre>
+        <div class="container-fluid">
+            <label class="navbar-brand">ScrollSpy Demo</label>
+            <div class="collapse navbar-collapse bs-example-js-navbar-scrollspy">
+                <ul class="nav navbar-nav">
+                    <li :class="{active: activeId== 'fat'}"><a href="#fat">@fat</a></li>
+                    <li :class="{active: activeId== 'mdo'}"><a href="#mdo">@mdo</a></li>
+                    <li :class="{active: activeId== 'one'}"><a href="#one">@one</a></li>
+                </ul>
             </div>
-        </nav>
-        <scrollspy :active.sync="activeId" v-pre>
-            <h4 id="fat">@fat</h4>
-            <p>Ad leggings keytar...</p>
-            <h4 id="mdo">@mdo</h4>
-            <p>Veniam marfa mustache...</p>
-            <h4 id="one">one</h4>
-            <p>Occaecat commodo aliqua delectus...</p>
-        </scrollspy>
-                        </pre-highlight>
+        </div>
+    </nav>
+    
+    <scrollspy :active.sync="activeId" v-pre>
+        <h4 id="fat">@fat</h4>
+        <p>Ad leggings keytar...</p>
+        <h4 id="mdo">@mdo</h4>
+        <p>Veniam marfa mustache...</p>
+        <h4 id="one">one</h4>
+        <p>Occaecat commodo aliqua delectus...</p>
+    </scrollspy>
+                        </doc-highlight>
                     </doc-section>
                     <doc-section title="Demo" sub-title="by test">
                         <p slot="description">
@@ -65,9 +66,9 @@
                         <div slot="example">
                             我是例子
                         </div>
-                        <pre-highlight type="html">
-        <div>我是不被解析的</div>
-                        </pre-highlight>
+                        <doc-highlight type="html">
+    <div>我是不被解析的</div>
+                        </doc-highlight>
                     </doc-section>
                 </div>
                 <!-- 菜单区-->

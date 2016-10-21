@@ -1,4 +1,4 @@
-define(['exports', 'text!./view.html', 'bases/mixins/appMixin', 'bases/components/doc_section/index', 'bases/components/pre_highlight/index', 'bases/components/scrollspy/index', 'css!./style.css'], function (exports, _view, _appMixin, _index, _index3, _index5) {
+define(['exports', 'text!./view.html', 'bases/mixins/appMixin', 'bases/components/doc_section/index', 'module/scrollspy/index', 'vue', 'css!./style.css'], function (exports, _view, _appMixin, _index, _index3, _vue) {
     'use strict';
 
     Object.defineProperty(exports, "__esModule", {
@@ -13,7 +13,7 @@ define(['exports', 'text!./view.html', 'bases/mixins/appMixin', 'bases/component
 
     var _index4 = _interopRequireDefault(_index3);
 
-    var _index6 = _interopRequireDefault(_index5);
+    var _vue2 = _interopRequireDefault(_vue);
 
     function _interopRequireDefault(obj) {
         return obj && obj.__esModule ? obj : {
@@ -37,12 +37,14 @@ define(['exports', 'text!./view.html', 'bases/mixins/appMixin', 'bases/component
         mixins: [_appMixin2.default],
 
         components: {
-            docSection: _index2.default,
-            preHighlight: _index4.default,
-            scrollspy: _index6.default
+            scrollspy: _index4.default
         },
 
         created: function created() {
+
+            //加载doc-section插件
+            _vue2.default.use(_index2.default);
+
             this.$on('section.attach', function (id) {
                 this.demos.push(id);
             });
