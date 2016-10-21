@@ -227,6 +227,12 @@ input {
   height: 400px;
   background-image: linear-gradient(to bottom, #41b883, #c4fdd5);
 }
+.container-home > .banner > h1 {
+  height: 400px;
+  line-height: 400px;
+  color: #fff;
+  text-align: center;
+}
 .container-home > .home {
   font-size: 24px;
   text-align: center;
@@ -782,6 +788,18 @@ pre {
   text-transform: uppercase;
   letter-spacing: 1px;
   content: "STI-DEMO";
+}
+.doc-highlight {
+  position: relative;
+}
+.doc-highlight > .highlight-label {
+  color: #ddd;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+.doc-highlight .hljs {
+  background: #35495e;
 }
 
 /*# sourceMappingURL=map/sti.css.map */

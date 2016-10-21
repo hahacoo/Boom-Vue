@@ -3,7 +3,6 @@
  * 基于highlighthjs
  * by zhangdi
  */
-import 'css!./style.css'
 import template from 'text!./view.html'
 import compMixin from 'bases/mixins/compMixin';
 
