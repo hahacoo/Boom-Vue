@@ -1,0 +1,9 @@
+<div class="doc-table">
+
+    <partial name="prop-partial" v-if="type == 'prop'"></partial>
+
+    <partial name="event-partial" v-else></partial>
+
+    <slot></slot>
+
+</div>

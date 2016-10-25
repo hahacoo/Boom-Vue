@@ -791,6 +791,7 @@ pre {
 }
 .doc-highlight {
   position: relative;
+  margin-bottom: 15px;
 }
 .doc-highlight > .highlight-label {
   color: #ddd;
@@ -800,6 +801,10 @@ pre {
 }
 .doc-highlight .hljs {
   background: #35495e;
+}
+.doc-api h2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 
 /*# sourceMappingURL=map/sti.css.map */

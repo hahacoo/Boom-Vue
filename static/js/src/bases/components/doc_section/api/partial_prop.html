@@ -1,0 +1,44 @@
+<h2>
+    参数   
+</h2>
+
+<table class="table table-bordered">
+
+    <thead>
+        <tr>
+            <th>
+                名称
+            </th>
+            <th>
+                类型
+            </th>
+            <th>
+                默认值
+            </th>
+            <th>
+                描述
+            </th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr v-for="prop in props">
+            <td>
+                {{prop.name}}
+            </td>
+
+            <td>
+                <code v-html="prop.type" v-if="prop.type"></code>
+            </td>
+
+            <td>
+                <code v-html="prop.default" v-if="prop.default"></code>
+            </td>
+
+            <td v-html="prop.desc">
+            </td>
+        </tr>
+
+    </tbody>
+
+</table>

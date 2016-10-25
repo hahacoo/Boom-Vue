@@ -1,5 +1,5 @@
 <div class="exhibition">
-    <scrollspy offset="150" :active.sync="demoId" selector=">.container>.row>.col-md-9>[id]">
+    <scrollspy offset="200" :active.sync="demoId" selector=">.container>.row>.col-md-9>[id]">
         <div class="container">
             <div class="row">
                 <!-- 组件展示区-->
@@ -57,6 +57,22 @@
         <p>Occaecat commodo aliqua delectus...</p>
     </scrollspy>
                         </doc-highlight>
+
+                        <doc-api>
+                            <doc-prop name="active" type="String" default="" desc="滚动过程中当前处于active状态的dom的id，该值为双向绑定">
+                            </doc-prop>
+                            <doc-prop name="offset" type="" default="80" desc="处于选中状态的dom节点距顶部的偏移量">
+                            </doc-prop>
+                            <doc-prop name="indicate" type="String" default="id" desc="dom节点的唯一标示">
+                            </doc-prop>
+                            <doc-prop name="cheight" type="" default="100%" desc="容器的高度，支持<code>数值</code>、<code>百分比</code>、<code>像素值</code>">
+                            </doc-prop>
+                        </doc-api>
+
+                        <doc-api type="event">
+                            <doc-prop name="active" args="a,b" desc="滚动过程中当前处于active状态的dom的id，该值为双向绑定">
+                            </doc-prop>
+                        </doc-api>
                     </doc-section>
 
     <!-- 拟态窗Modal  -->
