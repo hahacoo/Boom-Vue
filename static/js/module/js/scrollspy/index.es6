@@ -3,9 +3,7 @@
  * 根据内容与容器的相对位置，获取当前选中的内容
  * by zhangdi
  */
-import 'css!./style.css'
-import template from 'text!./view.html'
-import compMixin from 'bases/mixins/compMixin';
+import template from './view.html'
 import $ from 'jquery';
 
 export default {
@@ -62,8 +60,6 @@ export default {
     },
 
     template,
-
-    mixins: [compMixin],
 
     ready() {
 

@@ -7,3 +7,5 @@ node_modules/
 static/js/bower_components/
 static/js/gulp/node_modules/
 
+static/js/dist/module
+

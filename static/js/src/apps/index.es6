@@ -6,13 +6,13 @@ import template from 'text!./view.html';
 import routerMixin from 'bases/mixins/routerMixin';
 import 'dist/js/config/index';
 
-import scrollspy from 'module/scrollspy/index';
 import menu from 'bases/components/menu/index';
 import appHeader from 'bases/components/header/index';
 import filters from 'bases/filters/index';
 
 import Vue from 'vue';
-import $ from 'jquery';
+
+import StiVue from 'module/sti-vue';
 
 let app = new Vue({
 
@@ -43,7 +43,6 @@ let app = new Vue({
 	},
 
 	components: {
-		scrollspy,
 		appHeader,
 		menu,
 		home: function(resolve) {
@@ -55,7 +54,8 @@ let app = new Vue({
 			require(['dist/js/core/error/index'], function(component) {
 				resolve(component.default)
 			})
-		}
+		},
+		scrollspy: StiVue.scrollspy
 	},
 
 	created: function() {

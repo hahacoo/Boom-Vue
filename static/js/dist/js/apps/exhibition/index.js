@@ -1,4 +1,4 @@
-define(['exports', 'text!./view.html', 'bases/mixins/appMixin', 'bases/components/doc_section/index', 'module/scrollspy/index', 'vue', 'css!./style.css'], function (exports, _view, _appMixin, _index, _index3, _vue) {
+define(['exports', 'text!./view.html', 'bases/mixins/appMixin', 'bases/components/doc_section/index', 'module/sti-vue', 'vue', 'css!./style.css'], function (exports, _view, _appMixin, _index, _stiVue, _vue) {
     'use strict';
 
     Object.defineProperty(exports, "__esModule", {
@@ -11,7 +11,7 @@ define(['exports', 'text!./view.html', 'bases/mixins/appMixin', 'bases/component
 
     var _index2 = _interopRequireDefault(_index);
 
-    var _index4 = _interopRequireDefault(_index3);
+    var _stiVue2 = _interopRequireDefault(_stiVue);
 
     var _vue2 = _interopRequireDefault(_vue);
 
@@ -37,7 +37,7 @@ define(['exports', 'text!./view.html', 'bases/mixins/appMixin', 'bases/component
         mixins: [_appMixin2.default],
 
         components: {
-            scrollspy: _index4.default
+            scrollspy: _stiVue2.default.scrollspy
         },
 
         created: function created() {

@@ -38,7 +38,6 @@ server:
     - ../../../static/js/webpack
   browser: google chrome
   open: true
-  
 
 # 源文件
 src:
@@ -56,6 +55,19 @@ dest:
   css: ../dist/css
   cssbase: ../dist/css
   baseCSS: ../dist/css/*.css
+  module: ../dist/module
+  bundle: sti-vue.js
+  umd: ../dist/module/umd
+
+# 组件库文件
+module:
+  root: ../module
+  index: ../module/index.es6
+  modules: ../module/js/**/*.*
+  lessBase: ../module/less/sti-vue.less
+  less: ../module/less/**/*.less
+  dest: ../dist/module
+  destLess: ../dist/module/css
 
 # sftp信息
 sftp:

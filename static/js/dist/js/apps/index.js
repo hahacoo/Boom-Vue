@@ -1,4 +1,4 @@
-define(['exports', 'text!./view.html', 'bases/mixins/routerMixin', 'module/scrollspy/index', 'bases/components/menu/index', 'bases/components/header/index', 'bases/filters/index', 'vue', 'jquery', 'dist/js/config/index'], function (exports, _view, _routerMixin, _index, _index3, _index5, _index7, _vue, _jquery) {
+define(['exports', 'text!./view.html', 'bases/mixins/routerMixin', 'bases/components/menu/index', 'bases/components/header/index', 'bases/filters/index', 'vue', 'module/sti-vue', 'dist/js/config/index'], function (exports, _view, _routerMixin, _index, _index3, _index5, _vue, _stiVue) {
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
@@ -15,11 +15,9 @@ define(['exports', 'text!./view.html', 'bases/mixins/routerMixin', 'module/scrol
 
 	var _index6 = _interopRequireDefault(_index5);
 
-	var _index8 = _interopRequireDefault(_index7);
-
 	var _vue2 = _interopRequireDefault(_vue);
 
-	var _jquery2 = _interopRequireDefault(_jquery);
+	var _stiVue2 = _interopRequireDefault(_stiVue);
 
 	function _interopRequireDefault(obj) {
 		return obj && obj.__esModule ? obj : {
@@ -27,6 +25,10 @@ define(['exports', 'text!./view.html', 'bases/mixins/routerMixin', 'module/scrol
 		};
 	}
 
+	/**
+  * App根组件
+  * 功能：负责主视图切换、错误页面处理
+  */
 	var app = new _vue2.default({
 
 		el: 'body',
@@ -56,9 +58,8 @@ define(['exports', 'text!./view.html', 'bases/mixins/routerMixin', 'module/scrol
 		},
 
 		components: {
-			scrollspy: _index2.default,
-			appHeader: _index6.default,
-			menu: _index4.default,
+			appHeader: _index4.default,
+			menu: _index2.default,
 			home: function home(resolve) {
 				require(['dist/js/core/home/index'], function (component) {
 					resolve(component.default);
@@ -68,7 +69,8 @@ define(['exports', 'text!./view.html', 'bases/mixins/routerMixin', 'module/scrol
 				require(['dist/js/core/error/index'], function (component) {
 					resolve(component.default);
 				});
-			}
+			},
+			scrollspy: _stiVue2.default.scrollspy
 		},
 
 		created: function created() {
@@ -99,11 +101,9 @@ define(['exports', 'text!./view.html', 'bases/mixins/routerMixin', 'module/scrol
 				this.showSide = false;
 			});
 
-			_vue2.default.use(_index8.default);
+			_vue2.default.use(_index6.default);
 		}
-	}); /**
-      * App根组件
-      * 功能：负责主视图切换、错误页面处理
-      */
+	});
+
 	exports.default = app;
 });

@@ -2,7 +2,7 @@ import 'css!./style.css'
 import template from 'text!./view.html';
 import appMixin from 'bases/mixins/appMixin';
 import docSection from 'bases/components/doc_section/index';
-import scrollspy from 'module/scrollspy/index';
+import StiVue from 'module/sti-vue';
 
 import Vue from 'vue';
 
@@ -22,7 +22,7 @@ export default {
     mixins: [appMixin],
 
     components: {
-        scrollspy
+        scrollspy: StiVue.scrollspy
     },
 
     created (){

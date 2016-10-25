@@ -23,17 +23,24 @@ var gulp = require("gulp"),
 	minimist = require('minimist'), //参数处理
 	browserSync = require('browser-sync').create(), //资源热替换
 	yaml = require('js-yaml'), //读取配置文件
-	reload = browserSync.reload;
+	reload = browserSync.reload,
+	browserify = require('browserify'),
+	source = require('vinyl-source-stream'),
+	buffer = require('vinyl-buffer'),
+	streamify = require('vinyl-buffer'),
+	standalonify = require('standalonify');
 
 //gulp插件
 var util = require('gulp-util'), //gulputil插件
 	cached = require('gulp-cached'), //gulp缓存插件
+	filter = require('gulp-filter'), //filter处理
 	less = require('gulp-less'), //gulp-less插件
 	sourcemaps = require('gulp-sourcemaps'), //gulp-sourcmap插件
 	LessAutoprefix = require('less-plugin-autoprefix'), //gulp-css前缀自动补全less插件
 	autoprefix = new LessAutoprefix({
 		browsers: ['last 2 versions']
 	}),
+	uglify = require('gulp-uglify'), //gulp-uglifyjs文件压缩混淆
 	cssmin = require('gulp-cssmin'), //gulp-css压缩插件
 	rename = require('gulp-rename'), //gulp重命名插件
 	babel = require('gulp-babel'), //gulpes6插件
@@ -41,6 +48,9 @@ var util = require('gulp-util'), //gulputil插件
 	//connect = require('gulp-connect'); //gulpconnect插件 启动一个本地服务，通过livereload实现页面重新加载，无法和express结合，放弃 × 
 	nodemon = require('gulp-nodemon'), //gulpnodemon插件，与node-dev类似
 	plumber = require('gulp-plumber'); //错误提示，不停止watch
+
+//webpack插件
+var webpack = require("webpack");
 
 //读取配置信息
 var _config = {};
@@ -56,6 +66,7 @@ try {
 var args = minimist(process.argv.slice(2), _config.argOptions),
 	src = _config.src,
 	dest = _config.dest,
+	module = _config.module,
 	sftp = _config.sftp,
 	server = _config.server;
 
@@ -142,11 +153,13 @@ function less2css() {
 		.pipe(gulp.dest(dest.js));
 }
 
+
+
 /**
  * 打印错误信息
  */
-function errrHandler( e ){
-    console.log( e );
+function errrHandler(e) {
+	console.log(e);
 }
 
 /**
@@ -160,8 +173,11 @@ function es2js() {
 
 	var plugins = path.resolve(__dirname, "./node_modules/babel-plugin-transform-es2015-modules-amd"),
 		presets = path.resolve(__dirname, "./node_modules/babel-preset-es2015");
+
 	return gulp.src(src.es6)
-		.pipe(plumber({errorHandler: errrHandler}))
+		.pipe(plumber({
+			errorHandler: errrHandler
+		}))
 		.pipe(cached('es2js'))
 		.pipe(babel({
 			plugins: [plugins],
@@ -238,6 +254,157 @@ function hotReload(done) {
 }
 
 /**
+ * 打包组件库 browserify
+ * @return {[type]} [description]
+ */
+function moduleBundle() {
+
+	var presets = path.resolve(__dirname, "./node_modules/babel-preset-es2015");
+
+	return browserify({
+			entries: module.index,
+		})
+		.plugin(standalonify, { //使打包后的js文件符合UMD规范并指定外部依赖包
+			name: 'StiVue',
+			deps: {
+				'jquery': 'jquery',
+			}
+		})
+		.transform("babelify", {
+			presets: [presets]
+		}) //es6语法编译
+		.transform("stringify", {
+			appliesTo: {
+				includeExtensions: ['.html']
+			},
+			minify: true,
+		}) //html文件
+		.transform("node-lessify") //less文件
+		.exclude('jquery')
+		.bundle() //打包
+		.pipe(source(dest.bundle)) //普通流转为vinly对象
+		.pipe(buffer()) //将streaming转为buffered vinyl对象 
+		// .pipe(sourcemaps.init({
+		// 	loadMaps: true
+		// }))
+		// .pipe(uglify())
+		// .on('error', util.log)
+		// .pipe(sourcemaps.write('./'))
+		.pipe(gulp.dest(dest.module));
+}
+
+/**
+ * 组件样式库入口
+ * @return {[type]} [description]
+ */
+function moduleLess2css_base() {
+	return gulp.src(module.lessBase)
+		.pipe(sourcemaps.init())
+		.pipe(less({
+			plugins: [autoprefix]
+		}))
+		.pipe(sourcemaps.write('./map'))
+		.pipe(gulp.dest(module.destLess));
+}
+
+/**
+ * 组件样式库
+ * @return {[type]} [description]
+ */
+function moduleLess2css() {
+	return gulp.src(module.less)
+		.pipe(cached('less2css'))
+		.pipe(less({
+			plugins: [autoprefix]
+		}))
+		.pipe(gulp.dest(module.destLess));
+}
+
+/**
+ * 组件库打包 webpack
+ * @param  {Function} done [description]
+ * @return {[type]}        [description]
+ */
+function webpackBundle(done) {
+
+	var presets = path.resolve(__dirname, "./node_modules/babel-preset-es2015"),
+		addModuleExports = path.resolve(__dirname, "./node_modules/babel-plugin-add-module-exports");
+
+	webpack({
+		entry: {
+			'sti-vue': module.index
+		},
+		output: {
+			path: module.dest,
+			filename: '[name].js',
+			library: 'StiVue', //导出lib库的名称
+			libraryTarget: 'umd' //导出lib库的类型 var、this、commonjs、amd、umd
+		},
+		watch: true, //监听文件变化
+		devtool: 'cheap-source-map', //sourcemap生成方式
+		module: {
+			noParse: [], //不需要webpack管理的文件路径
+			loaders: [
+				// {
+				// 	test: /\.css$/,
+				// 	loader: ExtractTextPlugin.extract("style-loader", "css-loader")
+				// }, {
+				// 	test: /\.scss$/,
+				// 	loader: ExtractTextPlugin.extract("style-loader", "css-loader!sass-loader")
+				// }, {
+				// 	test: /\.less$/,
+				// 	loader: ExtractTextPlugin.extract("style-loader", "css-loader!less-loader")
+				// },
+				{
+					test: /\.css$/,
+					loader: "style-loader!css-loader"
+				}, {
+					test: /\.less$/,
+					loader: "style-loader!css-loader!less-loader"
+				}, {
+					test: /\.es6$/,
+					exclude: /(node_modules|libs)/,
+					loader: "babel-loader",
+					query: {
+						presets: [presets],
+						plugins: [addModuleExports]
+					}
+				}, {
+					test: /\.(html|tpl)$/,
+					loader: "html"
+				}
+			]
+		},
+		externals: {
+			// require("jquery") is external and available
+			//  on the global var jQuery
+			//  第三方库不出现在最后的打包文件中
+			//  不推荐使用第三方库，如需添加在这里添加
+			"jquery": "jquery"
+		},
+		plugins: [
+			//提取公用组件
+			//new webpack.optimize.CommonsChunkPlugin('common.js', ['main1', 'main2'])
+		],
+		resolve: {
+			root: path.resolve(__dirname, module.modules),
+			alias: {}
+		},
+		resolveLoader: {
+			//modules的地址
+			root: path.resolve(__dirname, 'node_modules')
+		},
+	}, function(err, stats) {
+
+		if (err) throw new util.PluginError("webpack", err);
+		util.log("[webpack]", stats.toString({
+			// output options
+		}));
+		done();
+	});
+}
+
+/**
  * 启动热替换
  * 启动本地服务的方式无法和express整合，放弃
  * @return {[type]} [description]
@@ -262,35 +429,48 @@ function watch(done) {
 		delete cached.caches.es2js[path]; // gulp-cached 的删除 api
 
 		var filepath = path.replace(/\\/g, "/").replace(/\/src\//, '/dist/js/').replace(/\.es6$/, '.js')
-		//删除编译后的文件
-		del(filepath, {force: true})
+			//删除编译后的文件
+		del(filepath, {
+			force: true
+		})
 	})
 	var lessWatch = gulp.watch(src.less, less2css).on('unlink', function(path) {
 		delete cached.caches.less2css[path]; // gulp-cached 的删除 api
 
 		var filepath = path.replace(/\\/g, "/").replace(/\/src\//, '/dist/js/').replace(/\.less$/, '.css')
-		//删除编译后的文件
-		del(filepath, {force: true})
+			//删除编译后的文件
+		del(filepath, {
+			force: true
+		})
 	});
-	
+
 	var copyWatch = gulp.watch([src.html, src.css], copyOther).on('unlink', function(path) {
 		delete cached.caches.copyOther[path]; // gulp-cached 的删除 api
 
 		var filepath = path.replace(/\\/g, "/").replace(/\/src\//, '/dist/js/')
-		//删除编译后的文件
-		del(filepath, {force: true})
+			//删除编译后的文件
+		del(filepath, {
+			force: true
+		})
 	});
 
+	//var moduleWatch = gulp.watch(src.modules, gulp.series('bundle'))
+
 	var baseWatch = gulp.watch(src.baselessPath, less2css_base)
+
+	var moduleLess = gulp.watch(module.less, gulp.parallel(moduleLess2css, moduleLess2css_base))
 
 	done()
 }
 
+//打包module
+gulp.task('bundle', webpackBundle)
 
 //编译源文件
 gulp.task('complie', gulp.series(
 	clean,
-	gulp.parallel(copyOther, less2css_base, less2css, es2js),
+	gulp.parallel(copyOther, less2css_base, less2css, es2js, moduleLess2css, moduleLess2css_base),
+	'bundle',
 	cssCompress
 ));
 
@@ -305,3 +485,6 @@ gulp.task('publish', ssh)
 
 //默认task，编译--创建服务--热替换
 gulp.task('default', gulp.series('complie', bootstrap, hotReload, watch))
+
+//上传服务器
+gulp.task('babel', moduleBundle)
