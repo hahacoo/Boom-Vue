@@ -1,4 +1,4 @@
-define(['exports', 'text!./view.html', 'bases/mixins/appMixin', 'bases/components/doc_section/index', 'module/sti-vue', 'vue', 'css!./style.css'], function (exports, _view, _appMixin, _index, _stiVue, _vue) {
+define(['exports', 'text!./view.html', 'bases/mixins/appMixin', 'bases/components/doc_section/index', 'vue', 'module/sti-vue', 'text!doc/scrollspy/doc.html', 'text!doc/modal/doc.html', 'css!./style.css'], function (exports, _view, _appMixin, _index, _vue, _stiVue, _doc, _doc3) {
     'use strict';
 
     Object.defineProperty(exports, "__esModule", {
@@ -11,9 +11,13 @@ define(['exports', 'text!./view.html', 'bases/mixins/appMixin', 'bases/component
 
     var _index2 = _interopRequireDefault(_index);
 
+    var _vue2 = _interopRequireDefault(_vue);
+
     var _stiVue2 = _interopRequireDefault(_stiVue);
 
-    var _vue2 = _interopRequireDefault(_vue);
+    var _doc2 = _interopRequireDefault(_doc);
+
+    var _doc4 = _interopRequireDefault(_doc3);
 
     function _interopRequireDefault(obj) {
         return obj && obj.__esModule ? obj : {
@@ -42,6 +46,11 @@ define(['exports', 'text!./view.html', 'bases/mixins/appMixin', 'bases/component
         template: _view2.default,
 
         mixins: [_appMixin2.default],
+
+        partials: {
+            scrollspyDoc: _doc2.default,
+            modalDoc: _doc4.default
+        },
 
         components: {
             scrollspy: _stiVue2.default.scrollspy,

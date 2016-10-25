@@ -1,0 +1,67 @@
+<!-- 将自己的组件介绍包括在doc-section，分别包括title、subtitle、description、example-->
+<doc-section title="Scrollspy" sub-title="by zhangdi">
+    <!-- 标题-->
+    <p slot="description">
+        自动将内容的滚动结果与目标导航联系起来
+    </p>
+    <!-- 例子-->
+    <div slot="example">
+        <nav class="navbar navbar-default navbar-static">
+            <div class="container-fluid">
+                <label class="navbar-brand">ScrollSpy Demo</label>
+                <div class="collapse navbar-collapse bs-example-js-navbar-scrollspy">
+                    <ul class="nav navbar-nav">
+                        <li :class="{active: activeId== 'fat'}"><a href="#fat">@fat</a></li>
+                        <li :class="{active: activeId== 'mdo'}"><a href="#mdo">@mdo</a></li>
+                        <li :class="{active: activeId== 'one'}"><a href="#one">@one</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <scrollspy :active.sync="activeId" cheight="200">
+            <h4 id="fat">@fat</h4>
+            <p>Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie minim qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson aesthetic. Nihil tattooed accusamus, cred irony biodiesel keffiyeh artisan ullamco consequat.</p>
+            <h4 id="mdo">@mdo</h4>
+            <p>Veniam marfa mustache skateboard, adipisicing fugiat velit pitchfork beard. Freegan beard aliqua cupidatat mcsweeney's vero. Cupidatat four loko nisi, ea helvetica nulla carles. Tattooed cosby sweater food truck, mcsweeney's quis non freegan vinyl. Lo-fi wes anderson +1 sartorial. Carles non aesthetic exercitation quis gentrify. Brooklyn adipisicing craft beer vice keytar deserunt.</p>
+            <h4 id="one">one</h4>
+            <p>Occaecat commodo aliqua delectus. Fap craft beer deserunt skateboard ea. Lomo bicycle rights adipisicing banh mi, velit ea sunt next level locavore single-origin coffee in magna veniam. High life id vinyl, echo park consequat quis aliquip banh mi pitchfork. Vero VHS est adipisicing. Consectetur nisi DIY minim messenger bag. Cred ex in, sustainable delectus consectetur fanny pack iphone.</p>
+        </scrollspy>
+    </div>
+    <!-- 代码或者其他api注释-->
+    <doc-highlight type="html">
+        <!-- 需要高亮显示的部分如果是自定义组件，受vue解析顺序的影响，要使用v-pre阻止vue解析，才能保证显示-->
+        <nav class="navbar navbar-default navbar-static" v-pre>
+        <div class="container-fluid">
+            <label class="navbar-brand">ScrollSpy Demo</label>
+            <div class="collapse navbar-collapse bs-example-js-navbar-scrollspy">
+                <ul class="nav navbar-nav">
+                    <li :class="{active: activeId== 'fat'}"><a href="#fat">@fat</a></li>
+                    <li :class="{active: activeId== 'mdo'}"><a href="#mdo">@mdo</a></li>
+                    <li :class="{active: activeId== 'one'}"><a href="#one">@one</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <scrollspy :active.sync="activeId" v-pre>
+        <h4 id="fat">@fat</h4>
+        <p>Ad leggings keytar...</p>
+        <h4 id="mdo">@mdo</h4>
+        <p>Veniam marfa mustache...</p>
+        <h4 id="one">one</h4>
+        <p>Occaecat commodo aliqua delectus...</p>
+    </scrollspy>
+    </doc-highlight>
+    
+    <!--props描述-->
+    <doc-api>
+        <doc-prop name="active" type="String" default="" desc="滚动过程中当前处于active状态的dom的id，该值为双向绑定">
+        </doc-prop>
+        <doc-prop name="offset" type="" default="80" desc="处于选中状态的dom节点距顶部的偏移量">
+        </doc-prop>
+        <doc-prop name="indicate" type="String" default="id" desc="dom节点的唯一标示">
+        </doc-prop>
+        <doc-prop name="cheight" type="" default="100%" desc="容器的高度，支持<code>数值</code>、<code>百分比</code>、<code>像素值</code>">
+        </doc-prop>
+    </doc-api>
+    
+</doc-section>

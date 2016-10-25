@@ -5,7 +5,8 @@ require.config({
         bases:  'dist/js/bases',
         components: 'dist/js/components',
         core: 'dist/js/core',
-        module: 'dist/module'
+        module: 'dist/module',
+        doc: 'module/js'
     },
     
     shim: {},

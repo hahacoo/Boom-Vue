@@ -1,0 +1,22 @@
+<!-- 拟态窗Modal  -->
+<doc-section title="Modal" sub-title="by manghau">
+    <div slot="example">
+        <button type="button" class="btn btn-primary" @click="showModal">点我</button>
+        <modal :if-show.sync="isModalShow" :can-click-blank="false">
+            <modalheader slot="header" title="我是标题" :if-show-arrow="true"></modalheader>
+            <modalbody slot="body">
+                我是内容内容内容
+            </modalbody>
+            <modalfooter slot="footer" close-content="关闭" save-content="保存"></modalfooter>
+        </modal>
+    </div>
+    <doc-highlight type="html">
+        <modal :if-show.sync="isModalShow" :can-click-blank="false" v-pre>
+        <modalheader slot="header" title="我是标题" :if-show-arrow="true"></modalheader>
+        <modalbody slot="body">
+            我是内容内容内容
+        </modalbody>
+        <modalfooter slot="footer" close-content="关闭" save-content="保存"></modalfooter>
+    </modal>
+    </doc-highlight>
+</doc-section>

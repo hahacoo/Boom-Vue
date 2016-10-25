@@ -343,7 +343,7 @@ function webpackBundle(done) {
 		watch: true, //监听文件变化
 		devtool: 'cheap-source-map', //sourcemap生成方式
 		module: {
-			noParse: [], //不需要webpack管理的文件路径
+			noParse: /\.doc\.html$/, //不需要webpack管理的文件路径
 			loaders: [
 				// {
 				// 	test: /\.css$/,
