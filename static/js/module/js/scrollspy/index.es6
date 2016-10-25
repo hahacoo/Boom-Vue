@@ -14,7 +14,6 @@ export default {
     props: {
         //触发事件的偏移量
         offset: {
-            type: Number,
             default: 80
         },
 
@@ -124,7 +123,7 @@ export default {
                     this.active = indicate
 
                     return
-                }else if(Math.abs(scrollTop - offsetTop) < this.offset) {
+                }else if(Math.abs(scrollTop - offsetTop) < +this.offset) {
                     let indicate = indicates[i][this.indicate]
                     if(indicate === undefined) {
                         throw Error('未获取到指定' + this.indicate + '的属性值')
