@@ -388,7 +388,8 @@ function webpackBundle(done) {
 		],
 		resolve: {
 			root: path.resolve(__dirname, module.modules),
-			alias: {}
+			alias: {},
+			extensions: ['', '.js', '.es6', '.html']
 		},
 		resolveLoader: {
 			//modules的地址

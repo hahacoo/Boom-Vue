@@ -1,9 +1,11 @@
 /**
  * sti-vue box入口文件
  */
+import modal from './js/modal/index.es6'
 import scrollspy from './js/scrollspy/index.es6'
 
 export default {
-    scrollspy
+    scrollspy,
+    modal
 }
 

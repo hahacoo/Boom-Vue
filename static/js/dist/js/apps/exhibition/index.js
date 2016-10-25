@@ -21,6 +21,11 @@ define(['exports', 'text!./view.html', 'bases/mixins/appMixin', 'bases/component
         };
     }
 
+    var _StiVue$modal = _stiVue2.default.modal;
+    var modal = _StiVue$modal.modal;
+    var modalheader = _StiVue$modal.modalheader;
+    var modalbody = _StiVue$modal.modalbody;
+    var modalfooter = _StiVue$modal.modalfooter;
     exports.default = {
 
         data: function data() {
@@ -28,7 +33,9 @@ define(['exports', 'text!./view.html', 'bases/mixins/appMixin', 'bases/component
                 defaultView: '',
                 activeId: 'fat',
                 demos: [],
-                demoId: ''
+                demoId: '',
+
+                isModalShow: false
             };
         },
 
@@ -37,7 +44,11 @@ define(['exports', 'text!./view.html', 'bases/mixins/appMixin', 'bases/component
         mixins: [_appMixin2.default],
 
         components: {
-            scrollspy: _stiVue2.default.scrollspy
+            scrollspy: _stiVue2.default.scrollspy,
+            modal: modal,
+            modalheader: modalheader,
+            modalbody: modalbody,
+            modalfooter: modalfooter
         },
 
         created: function created() {
@@ -48,6 +59,13 @@ define(['exports', 'text!./view.html', 'bases/mixins/appMixin', 'bases/component
             this.$on('section.attach', function (id) {
                 this.demos.push(id);
             });
+        },
+
+
+        methods: {
+            showModal: function showModal() {
+                this.isModalShow = !this.isModalShow;
+            }
         }
     };
 });

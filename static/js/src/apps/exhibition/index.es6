@@ -6,6 +6,8 @@ import StiVue from 'module/sti-vue';
 
 import Vue from 'vue';
 
+let {modal, modalheader, modalbody, modalfooter} = StiVue.modal
+
 export default {
 
     data: function() {
@@ -13,7 +15,9 @@ export default {
             defaultView: '',
             activeId: 'fat',
             demos: [],
-            demoId: ''
+            demoId: '',
+
+            isModalShow: false
         }
     },
 
@@ -22,7 +26,11 @@ export default {
     mixins: [appMixin],
 
     components: {
-        scrollspy: StiVue.scrollspy
+        scrollspy: StiVue.scrollspy,
+        modal,
+        modalheader,
+        modalbody,
+        modalfooter
     },
 
     created (){
@@ -33,5 +41,11 @@ export default {
         this.$on('section.attach', function(id) {
             this.demos.push(id)
         })
+    },
+
+    methods: {
+        showModal: function() {
+            this.isModalShow = !this.isModalShow;
+        }
     }
 };
