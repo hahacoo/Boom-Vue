@@ -11,6 +11,7 @@ let {modal, modalheader, modalbody, modalfooter} = StiVue.modal
 //doc
 import scrollspyDoc from 'text!doc/scrollspy/doc.html'
 import modalDoc from 'text!doc/modal/doc.html'
+import alertsDoc from 'text!doc/alerts/doc.html'
 
 export default {
 
@@ -31,7 +32,8 @@ export default {
 
     partials: {
         scrollspyDoc,
-        modalDoc
+        modalDoc,
+        alertsDoc
     },
 
     components: {
@@ -39,7 +41,8 @@ export default {
         modal,
         modalheader,
         modalbody,
-        modalfooter
+        modalfooter,
+        alerts: StiVue.alerts
     },
 
     created (){
@@ -53,8 +56,14 @@ export default {
     },
 
     methods: {
+
         showModal: function() {
             this.isModalShow = !this.isModalShow;
+        },
+
+        showAlert: function (message, type) {
+            this.$broadcast('alert', message, type);
         }
+
     }
 };

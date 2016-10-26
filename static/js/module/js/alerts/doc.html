@@ -1,0 +1,44 @@
+<!-- 将自己的组件介绍包括在doc-section，分别包括title、subtitle、description、example-->
+<doc-section title="alerts" sub-title="by lizhenghua">
+    <!-- 标题-->
+    <p slot="description">
+        alerts是一个弹出警告信息的组件，支持的警告类型有error - success - info - warning
+    </p>
+    <!-- 例子-->
+    <div slot="example">
+        <button type="button" class="btn btn-error" @click="showAlert('错误error', 'error')">error</button>
+        <button type="button" class="btn btn-success" @click="showAlert('成功success', 'success')">成功success</button>
+        <button type="button" class="btn btn-info" @click="showAlert('信息info', 'info')">info</button>
+        <button type="button" class="btn btn-warning" @click="showAlert('警告warning', 'warning')">warning</button>
+        <button type="button" class="btn btn-success" @click="showAlert('默认是success')">默认</button>
+
+        <alerts></alerts>
+
+    </div>
+    <!-- 代码或者其他api注释-->
+    <doc-highlight type="html">
+    <!-- 需要高亮显示的部分如果是自定义组件，受vue解析顺序的影响，要使用v-pre阻止vue解析，才能保证显示-->
+    <alerts v-pre></alerts>
+    <button type="button" class="btn btn-error" @click="showAlert('错误error', 'error')">error</button>
+    <button type="button" class="btn btn-success" @click="showAlert('成功success', 'success')">success</button>
+    <button type="button" class="btn btn-info" @click="showAlert('信息info', 'info')">info</button>
+    <button type="button" class="btn btn-warning" @click="showAlert('警告warning', 'warning')">warning</button>
+    <button type="button" class="btn btn-success" @click="showAlert('默认是success')">默认</button>
+    </doc-highlight>
+
+    <doc-highlight type="javascript">
+        <!-- 需要高亮显示的部分如果是自定义组件，受vue解析顺序的影响，要使用v-pre阻止vue解析，才能保证显示-->
+    showAlert: function (message, type) {
+        this.$broadcast("alert", message, type);
+    }
+    </doc-highlight>
+    
+    <!--props描述-->
+    <doc-api>
+        <doc-prop name="message" type="String" default="" desc="alert的提示文字">
+        </doc-prop>
+        <doc-prop name="type" type="String" default="success" desc="alert的类型，决定了alert框的颜色等样式">
+        </doc-prop>
+    </doc-api>
+    
+</doc-section>

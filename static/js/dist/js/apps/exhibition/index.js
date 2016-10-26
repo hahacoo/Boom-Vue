@@ -1,4 +1,4 @@
-define(['exports', 'text!./view.html', 'bases/mixins/appMixin', 'bases/components/doc_section/index', 'vue', 'module/sti-vue', 'text!doc/scrollspy/doc.html', 'text!doc/modal/doc.html', 'css!./style.css'], function (exports, _view, _appMixin, _index, _vue, _stiVue, _doc, _doc3) {
+define(['exports', 'text!./view.html', 'bases/mixins/appMixin', 'bases/components/doc_section/index', 'vue', 'module/sti-vue', 'text!doc/scrollspy/doc.html', 'text!doc/modal/doc.html', 'text!doc/alerts/doc.html', 'css!./style.css'], function (exports, _view, _appMixin, _index, _vue, _stiVue, _doc, _doc3, _doc5) {
     'use strict';
 
     Object.defineProperty(exports, "__esModule", {
@@ -19,17 +19,19 @@ define(['exports', 'text!./view.html', 'bases/mixins/appMixin', 'bases/component
 
     var _doc4 = _interopRequireDefault(_doc3);
 
+    var _doc6 = _interopRequireDefault(_doc5);
+
     function _interopRequireDefault(obj) {
         return obj && obj.__esModule ? obj : {
             default: obj
         };
     }
 
-    var _StiVue$modal = _stiVue2.default.modal;
-    var modal = _StiVue$modal.modal;
-    var modalheader = _StiVue$modal.modalheader;
-    var modalbody = _StiVue$modal.modalbody;
-    var modalfooter = _StiVue$modal.modalfooter;
+    var _StiVue$modal = _stiVue2.default.modal,
+        modal = _StiVue$modal.modal,
+        modalheader = _StiVue$modal.modalheader,
+        modalbody = _StiVue$modal.modalbody,
+        modalfooter = _StiVue$modal.modalfooter;
     exports.default = {
 
         data: function data() {
@@ -49,7 +51,8 @@ define(['exports', 'text!./view.html', 'bases/mixins/appMixin', 'bases/component
 
         partials: {
             scrollspyDoc: _doc2.default,
-            modalDoc: _doc4.default
+            modalDoc: _doc4.default,
+            alertsDoc: _doc6.default
         },
 
         components: {
@@ -57,7 +60,8 @@ define(['exports', 'text!./view.html', 'bases/mixins/appMixin', 'bases/component
             modal: modal,
             modalheader: modalheader,
             modalbody: modalbody,
-            modalfooter: modalfooter
+            modalfooter: modalfooter,
+            alerts: _stiVue2.default.alerts
         },
 
         created: function created() {
@@ -72,9 +76,15 @@ define(['exports', 'text!./view.html', 'bases/mixins/appMixin', 'bases/component
 
 
         methods: {
+
             showModal: function showModal() {
                 this.isModalShow = !this.isModalShow;
+            },
+
+            showAlert: function showAlert(message, type) {
+                this.$broadcast('alert', message, type);
             }
+
         }
     };
 });
