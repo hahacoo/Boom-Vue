@@ -12,6 +12,7 @@ let {modal, modalheader, modalbody, modalfooter} = StiVue.modal
 import scrollspyDoc from 'text!doc/scrollspy/doc.html'
 import modalDoc from 'text!doc/modal/doc.html'
 import alertsDoc from 'text!doc/alerts/doc.html'
+import messageCenterDoc from 'text!doc/messageCenter/doc.html'
 
 export default {
 
@@ -21,7 +22,7 @@ export default {
             activeId: 'fat',
             demos: [],
             demoId: '',
-
+            
             isModalShow: false
         }
     },
@@ -33,7 +34,8 @@ export default {
     partials: {
         scrollspyDoc,
         modalDoc,
-        alertsDoc
+        alertsDoc,
+        messageCenterDoc
     },
 
     components: {
@@ -42,7 +44,8 @@ export default {
         modalheader,
         modalbody,
         modalfooter,
-        alerts: StiVue.alerts
+        alerts: StiVue.alerts,
+        messageCenter: StiVue.messageCenter
     },
 
     created (){
@@ -61,8 +64,16 @@ export default {
             this.isModalShow = !this.isModalShow;
         },
 
-        showAlert: function (message, type) {
-            this.$broadcast('alert', message, type);
+        addAlert: function (message, type) {
+            this.$broadcast('sti.alert.add', message, type);
+        },
+
+        openMcenter: function (value) {
+            this.$broadcast('sti.mcenter.open', value);
+        },
+
+        addMessage: function (message) {
+            this.$broadcast('sti.mcenter.add', message);
         }
 
     }

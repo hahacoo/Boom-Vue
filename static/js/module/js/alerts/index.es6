@@ -1,4 +1,3 @@
-// define(['text!./view.html', 'vue', 'css!./style.css'], function (view, vue) {
 /**
  * alerts
  * 取代noty的信息提示组件，从右上角弹出并且缩回
@@ -11,11 +10,14 @@ export default  {
 
     template,
 
-    props: ['maxAlert'],
+    props: {
+        maxAlert: {
+            default: 5
+        }
+    },
 
     data: function () {
         return {
-            maxAlert: this.maxAlert || 5,
             alertList: []
         }
     },
@@ -25,7 +27,7 @@ export default  {
     },
 
     events: {
-        'alert': function (message, type) {
+        'sti.alert.add': function (message, type) {
             this.addAlert(message, type);
         }
     },
@@ -33,8 +35,8 @@ export default  {
     methods: {
 
         addAlert: function (message, type) {
-            if (this.alertList.length == this.maxAlert) {
-                this.alertList.shift();
+            if (this.alertList.length >= this.maxAlert) {
+                this.alertList.splice(0, this.alertList.length - this.maxAlert + 1);
             }
             this.alertList.push({'message': message, 'type': type ||'success'});
         },
@@ -46,4 +48,3 @@ export default  {
     }
 
 };
-// });

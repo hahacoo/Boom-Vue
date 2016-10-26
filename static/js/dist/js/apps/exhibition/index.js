@@ -1,4 +1,4 @@
-define(['exports', 'text!./view.html', 'bases/mixins/appMixin', 'bases/components/doc_section/index', 'vue', 'module/sti-vue', 'text!doc/scrollspy/doc.html', 'text!doc/modal/doc.html', 'text!doc/alerts/doc.html', 'css!./style.css'], function (exports, _view, _appMixin, _index, _vue, _stiVue, _doc, _doc3, _doc5) {
+define(['exports', 'text!./view.html', 'bases/mixins/appMixin', 'bases/components/doc_section/index', 'vue', 'module/sti-vue', 'text!doc/scrollspy/doc.html', 'text!doc/modal/doc.html', 'text!doc/alerts/doc.html', 'text!doc/messageCenter/doc.html', 'css!./style.css'], function (exports, _view, _appMixin, _index, _vue, _stiVue, _doc, _doc3, _doc5, _doc7) {
     'use strict';
 
     Object.defineProperty(exports, "__esModule", {
@@ -20,6 +20,8 @@ define(['exports', 'text!./view.html', 'bases/mixins/appMixin', 'bases/component
     var _doc4 = _interopRequireDefault(_doc3);
 
     var _doc6 = _interopRequireDefault(_doc5);
+
+    var _doc8 = _interopRequireDefault(_doc7);
 
     function _interopRequireDefault(obj) {
         return obj && obj.__esModule ? obj : {
@@ -52,7 +54,8 @@ define(['exports', 'text!./view.html', 'bases/mixins/appMixin', 'bases/component
         partials: {
             scrollspyDoc: _doc2.default,
             modalDoc: _doc4.default,
-            alertsDoc: _doc6.default
+            alertsDoc: _doc6.default,
+            messageCenterDoc: _doc8.default
         },
 
         components: {
@@ -61,7 +64,8 @@ define(['exports', 'text!./view.html', 'bases/mixins/appMixin', 'bases/component
             modalheader: modalheader,
             modalbody: modalbody,
             modalfooter: modalfooter,
-            alerts: _stiVue2.default.alerts
+            alerts: _stiVue2.default.alerts,
+            messageCenter: _stiVue2.default.messageCenter
         },
 
         created: function created() {
@@ -81,8 +85,16 @@ define(['exports', 'text!./view.html', 'bases/mixins/appMixin', 'bases/component
                 this.isModalShow = !this.isModalShow;
             },
 
-            showAlert: function showAlert(message, type) {
-                this.$broadcast('alert', message, type);
+            addAlert: function addAlert(message, type) {
+                this.$broadcast('sti.alert.add', message, type);
+            },
+
+            openMcenter: function openMcenter(value) {
+                this.$broadcast('sti.mcenter.open', value);
+            },
+
+            addMessage: function addMessage(message) {
+                this.$broadcast('sti.mcenter.add', message);
             }
 
         }
