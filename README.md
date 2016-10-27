@@ -51,6 +51,7 @@
 |		|-dist gulp编译后文件夹
 |		|-gulp gulp配置文件
 |		|-src 前端es6文件
+|       |-module sti-vue组件库
 |
 |-views 服务端模板文件
 ```
