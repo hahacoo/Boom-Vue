@@ -29,11 +29,11 @@ define(['exports', 'text!./view.html', 'bases/mixins/appMixin', 'bases/component
         };
     }
 
-    var _StiVue$modal = _stiVue2.default.modal,
-        modal = _StiVue$modal.modal,
-        modalheader = _StiVue$modal.modalheader,
-        modalbody = _StiVue$modal.modalbody,
-        modalfooter = _StiVue$modal.modalfooter;
+    var _StiVue$modal = _stiVue2.default.modal;
+    var modal = _StiVue$modal.modal;
+    var modalheader = _StiVue$modal.modalheader;
+    var modalbody = _StiVue$modal.modalbody;
+    var modalfooter = _StiVue$modal.modalfooter;
     exports.default = {
 
         data: function data() {

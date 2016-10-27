@@ -11,8 +11,19 @@ export default  {
     template,
 
     props: {
-        maxAlert: {
+        /**
+         *
+         */
+        max: {
+            type : Number,
             default: 5
+        },
+
+        /**
+         * 消息有效存在的时间
+         */
+        live : {
+
         }
     },
 
@@ -34,17 +45,30 @@ export default  {
 
     methods: {
 
-        addAlert: function (message, type) {
+        add : function (message, type) {
+            let len = this.items.length
+
             if (this.alertList.length >= this.maxAlert) {
                 this.alertList.splice(0, this.alertList.length - this.maxAlert + 1);
             }
             this.alertList.push({'message': message, 'type': type ||'success'});
         },
 
-        delAlert: function (index) {
+        remove : function (index) {
             this.alertList.splice(index, 1);
+        },
+
+        addStyle (item) {
+            item.className = "" + item.type;
         }
 
+    },
+
+    computed : {
+
+        empty () {
+            return this.items.length > 0
+        }
     }
 
 };
