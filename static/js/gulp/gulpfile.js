@@ -268,6 +268,7 @@ function moduleBundle() {
 			name: 'StiVue',
 			deps: {
 				'jquery': 'jquery',
+				"d3": "d3"
 			}
 		})
 		.transform("babelify", {
@@ -381,7 +382,11 @@ function webpackBundle(done) {
 			//  第三方库不出现在最后的打包文件中
 			//  不推荐使用第三方库，如需添加在这里添加
 			"jquery": "jquery",
+<<<<<<< HEAD
 			"jqgrid" : "jqgrid"
+=======
+			"d3": "d3"
+>>>>>>> 7dde7130789ef20f78ce4a96ba1384c4fc9615a9
 		},
 		plugins: [
 			//提取公用组件

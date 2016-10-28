@@ -7,16 +7,20 @@ import docSection from 'bases/components/doc_section/index';
 import Vue from 'vue';
 
 import StiVue from 'module/sti-vue';
-let {modal, modalheader, modalbody, modalfooter} = StiVue.modal
+//  表格依赖的国际化文件
+import 'bower_components/jqGrid/js/i18n/grid.locale-cn'
 
-//doc
+//  doc
 import scrollspyDoc from 'text!doc/scrollspy/doc.html'
 import modalDoc from 'text!doc/modal/doc.html'
 import alertsDoc from 'text!doc/alerts/doc.html'
 import messageCenterDoc from 'text!doc/messageCenter/doc.html'
-import gridDoc from 'text!doc/jqGrid/doc.html'
-import 'bower_components/jqGrid/js/i18n/grid.locale-cn'
 
+import gridDoc from 'text!doc/jqGrid/doc.html'
+
+import mapDoc from 'text!doc/map/doc.html'
+
+let {modal, modalheader, modalbody, modalfooter} = StiVue.modal
 export default {
 
     data: function() {
@@ -39,7 +43,8 @@ export default {
         modalDoc,
         alertsDoc,
         messageCenterDoc,
-        gridDoc
+        gridDoc,
+        mapDoc
     },
 
     components: {
@@ -51,7 +56,8 @@ export default {
         alerts: StiVue.alerts,
         messageCenter: StiVue.messageCenter,
         jqGrid : StiVue.jqGrid,
-        jqCol : StiVue.jqCol
+        jqCol : StiVue.jqCol,
+        map: StiVue.map
     },
 
     created (){

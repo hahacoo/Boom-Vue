@@ -1,4 +1,4 @@
-define(['exports', 'text!./view.html', 'bases/mixins/appMixin', 'bases/components/doc_section/index', 'vue', 'module/sti-vue', 'text!doc/scrollspy/doc.html', 'text!doc/modal/doc.html', 'text!doc/alerts/doc.html', 'text!doc/messageCenter/doc.html', 'text!doc/jqGrid/doc.html', 'css!./style.css', 'css!bower_components/jqGrid/css/ui.jqgrid-bootstrap.css', 'bower_components/jqGrid/js/i18n/grid.locale-cn'], function (exports, _view, _appMixin, _index, _vue, _stiVue, _doc, _doc3, _doc5, _doc7, _doc9) {
+define(['exports', 'text!./view.html', 'bases/mixins/appMixin', 'bases/components/doc_section/index', 'vue', 'module/sti-vue', 'text!doc/scrollspy/doc.html', 'text!doc/modal/doc.html', 'text!doc/alerts/doc.html', 'text!doc/messageCenter/doc.html', 'text!doc/jqGrid/doc.html', 'text!doc/map/doc.html', 'css!./style.css', 'css!bower_components/jqGrid/css/ui.jqgrid-bootstrap.css', 'bower_components/jqGrid/js/i18n/grid.locale-cn'], function (exports, _view, _appMixin, _index, _vue, _stiVue, _doc, _doc3, _doc5, _doc7, _doc9, _doc11) {
     'use strict';
 
     Object.defineProperty(exports, "__esModule", {
@@ -24,6 +24,8 @@ define(['exports', 'text!./view.html', 'bases/mixins/appMixin', 'bases/component
     var _doc8 = _interopRequireDefault(_doc7);
 
     var _doc10 = _interopRequireDefault(_doc9);
+
+    var _doc12 = _interopRequireDefault(_doc11);
 
     function _interopRequireDefault(obj) {
         return obj && obj.__esModule ? obj : {
@@ -58,7 +60,8 @@ define(['exports', 'text!./view.html', 'bases/mixins/appMixin', 'bases/component
             modalDoc: _doc4.default,
             alertsDoc: _doc6.default,
             messageCenterDoc: _doc8.default,
-            gridDoc: _doc10.default
+            gridDoc: _doc10.default,
+            mapDoc: _doc12.default
         },
 
         components: {
@@ -70,7 +73,8 @@ define(['exports', 'text!./view.html', 'bases/mixins/appMixin', 'bases/component
             alerts: _stiVue2.default.alerts,
             messageCenter: _stiVue2.default.messageCenter,
             jqGrid: _stiVue2.default.jqGrid,
-            jqCol: _stiVue2.default.jqCol
+            jqCol: _stiVue2.default.jqCol,
+            map: _stiVue2.default.map
         },
 
         created: function created() {

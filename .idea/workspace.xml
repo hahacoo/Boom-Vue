@@ -2,19 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="540b125b-24e9-4e6f-bf8f-6f1544aa5be2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/module/js/jqGrid/doc.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/module/js/jqGrid/jqCol.es6" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/data/jqGrid-1.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/module/js/jqGrid/jqGrid.es6" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/module/js/jqGrid/template.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/bower.json" afterPath="$PROJECT_DIR$/static/js/bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/module/js/map/doc.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/data/mapData/drill_China.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/data/mapData/drill_world.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/module/js/map/index.es6" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/module/less/map/style.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/module/js/map/view.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/module/js/alerts/doc.html" afterPath="$PROJECT_DIR$/static/js/module/js/alerts/doc.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/gulp/gulpfile.js" afterPath="$PROJECT_DIR$/static/js/gulp/gulpfile.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/module/index.es6" afterPath="$PROJECT_DIR$/static/js/module/index.es6" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/module/js/alerts/index.es6" afterPath="$PROJECT_DIR$/static/js/module/js/alerts/index.es6" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/src/apps/exhibition/index.es6" afterPath="$PROJECT_DIR$/static/js/src/apps/exhibition/index.es6" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/dist/js/apps/exhibition/index.js" afterPath="$PROJECT_DIR$/static/js/dist/js/apps/exhibition/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/main.js" afterPath="$PROJECT_DIR$/static/js/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/dist/css/map/sti.css.map" afterPath="$PROJECT_DIR$/static/js/dist/css/map/sti.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/module/less/sti-vue.less" afterPath="$PROJECT_DIR$/static/js/module/less/sti-vue.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/module/less/alerts/style.less" afterPath="$PROJECT_DIR$/static/js/module/less/alerts/style.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/dist/js/apps/exhibition/view.html" afterPath="$PROJECT_DIR$/static/js/dist/js/apps/exhibition/view.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/module/js/alerts/view.html" afterPath="$PROJECT_DIR$/static/js/module/js/alerts/view.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/src/apps/exhibition/view.html" afterPath="$PROJECT_DIR$/static/js/src/apps/exhibition/view.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -37,10 +40,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="jqGrid.es6" pinned="false" current-in-tab="true">
+      <file leaf-file-name="jqGrid.es6" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/js/module/js/jqGrid/jqGrid.es6">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.9290928">
+            <state vertical-scroll-proportion="14.85">
               <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
               <folding />
             </state>
@@ -67,11 +70,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.es6" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.es6" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/static/js/src/apps/exhibition/index.es6">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.416667">
-              <caret line="37" column="21" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.54744524">
+              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -162,8 +165,8 @@
         <option value="$PROJECT_DIR$/static/js/module/js/jqGrid/template.html" />
         <option value="$PROJECT_DIR$/static/js/module/js/jqGrid/jqCol.es6" />
         <option value="$PROJECT_DIR$/static/js/module/js/jqGrid/doc.html" />
-        <option value="$PROJECT_DIR$/static/js/src/apps/exhibition/index.es6" />
         <option value="$PROJECT_DIR$/static/js/module/js/jqGrid/jqGrid.es6" />
+        <option value="$PROJECT_DIR$/static/js/src/apps/exhibition/index.es6" />
       </list>
     </option>
   </component>
@@ -484,70 +487,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vue" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vue" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bower_components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jqGrid" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="i18n" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vue" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vue" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bower_components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jqGrid" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -729,9 +668,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="2" column="43" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="43" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -775,9 +712,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -793,9 +728,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.05076142">
           <caret line="2" column="43" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="43" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -946,7 +879,7 @@
         <state vertical-scroll-proportion="0.20855057">
           <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1009,14 +942,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/src/apps/exhibition/index.es6">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.416667">
-          <caret line="37" column="21" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/data/jqGrid-1.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1027,8 +952,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static/js/module/js/jqGrid/jqGrid.es6">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.9290928">
+        <state vertical-scroll-proportion="14.85">
           <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/src/apps/exhibition/index.es6">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.54744524">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding />
         </state>
       </provider>
