@@ -11,7 +11,9 @@ export default  {
     template,
 
     props: {
-        maxAlert: {
+        alertShow: false,
+        max: {
+            type: Number,
             default: 5
         }
     },
@@ -22,27 +24,33 @@ export default  {
         }
     },
 
-    ready: function () {
-
-    },
-
     events: {
         'sti.alert.add': function (message, type) {
-            this.addAlert(message, type);
+            this.add(message, type);
+        }
+    },
+
+    computed: {
+        alertShow: function () {
+            return this.alertList.length > 0;
         }
     },
 
     methods: {
 
-        addAlert: function (message, type) {
-            if (this.alertList.length >= this.maxAlert) {
-                this.alertList.splice(0, this.alertList.length - this.maxAlert + 1);
+        add: function (message, type) {
+            if (this.alertList.length >= this.max) {
+                this.alertList.splice(0, this.alertList.length - this.max + 1);
             }
-            this.alertList.push({'message': message, 'type': type ||'success'});
+            this.alertList.push({'message': message, 'type': this.typeFormatter(type ||'success')});
         },
 
-        delAlert: function (index) {
-            this.alertList.splice(index, 1);
+        typeFormatter: function (type) {
+            return 'alert-' + type;
+        },
+
+        remove: function (item) {
+            this.alertList.$remove(item);
         }
 
     }

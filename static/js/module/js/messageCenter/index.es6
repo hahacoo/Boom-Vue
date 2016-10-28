@@ -14,33 +14,7 @@ export default  {
         return {
             name: '消息中心',
             mcenterShow: false,
-            messages: [
-                {
-                    text: '你刚刚登出了系统你刚刚登出了系统你刚刚登出了系统你刚刚登出了系统',
-                    type: 'success',
-                    time: 1477306539000
-                }, {
-                    text: 'this is a testtest test testtest. this is a testtest test testtest. this is a testtest test testtest',
-                    type: 'success',
-                    time: 1477306753000
-                }, {
-                    text: '你刚刚登出了系统',
-                    type: 'success',
-                    time: 1477306539000
-                }, {
-                    text: '你刚刚登陆了系统',
-                    type: 'success',
-                    time: 1477306753000
-                }, {
-                    text: '你刚刚登出了系统',
-                    type: 'success',
-                    time: 1477306539000
-                }, {
-                    text: '你刚刚登陆了系统',
-                    type: 'success',
-                    time: 1477306753000
-                }
-            ]
+            messages: []
         }
     },
 
