@@ -13,6 +13,7 @@ import scrollspyDoc from 'text!doc/scrollspy/doc.html'
 import modalDoc from 'text!doc/modal/doc.html'
 import alertsDoc from 'text!doc/alerts/doc.html'
 import messageCenterDoc from 'text!doc/messageCenter/doc.html'
+import mapDoc from 'text!doc/map/doc.html'
 
 export default {
 
@@ -35,7 +36,8 @@ export default {
         scrollspyDoc,
         modalDoc,
         alertsDoc,
-        messageCenterDoc
+        messageCenterDoc,
+        mapDoc
     },
 
     components: {
@@ -45,7 +47,8 @@ export default {
         modalbody,
         modalfooter,
         alerts: StiVue.alerts,
-        messageCenter: StiVue.messageCenter
+        messageCenter: StiVue.messageCenter,
+        map: StiVue.map
     },
 
     created (){
