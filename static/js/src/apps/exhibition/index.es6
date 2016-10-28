@@ -1,4 +1,5 @@
 import 'css!./style.css'
+import 'css!bower_components/jqGrid/css/ui.jqgrid-bootstrap.css'
 import template from 'text!./view.html';
 import appMixin from 'bases/mixins/appMixin';
 import docSection from 'bases/components/doc_section/index';
@@ -13,6 +14,8 @@ import scrollspyDoc from 'text!doc/scrollspy/doc.html'
 import modalDoc from 'text!doc/modal/doc.html'
 import alertsDoc from 'text!doc/alerts/doc.html'
 import messageCenterDoc from 'text!doc/messageCenter/doc.html'
+import gridDoc from 'text!doc/jqGrid/doc.html'
+import 'bower_components/jqGrid/js/i18n/grid.locale-cn'
 
 export default {
 
@@ -35,7 +38,8 @@ export default {
         scrollspyDoc,
         modalDoc,
         alertsDoc,
-        messageCenterDoc
+        messageCenterDoc,
+        gridDoc
     },
 
     components: {
@@ -45,7 +49,9 @@ export default {
         modalbody,
         modalfooter,
         alerts: StiVue.alerts,
-        messageCenter: StiVue.messageCenter
+        messageCenter: StiVue.messageCenter,
+        jqGrid : StiVue.jqGrid,
+        jqCol : StiVue.jqCol
     },
 
     created (){

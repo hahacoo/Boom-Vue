@@ -4,12 +4,22 @@ require.config({
     paths: {
         bases:  'dist/js/bases',
         components: 'dist/js/components',
+        bower : 'bower_components',
         core: 'dist/js/core',
         module: 'dist/module',
         doc: 'module/js'
     },
     
-    shim: {},
+    shim: {
+        'jquery-ui': {
+            deps: ['jquery'],
+            exports: '$'
+        },
+        'jqgrid' : {
+            deps: ['jquery-ui'],
+            exports: '$'
+        }
+    },
 
     packages: [{
         name: 'd3',
@@ -20,6 +30,10 @@ require.config({
         location: './bower_components/jquery',
         main: 'dist/jquery'
     }, {
+        name: 'jqgrid',
+        location: './bower_components/jqGrid/js',
+        main: 'jquery.jqGrid.min'
+    },{
         name: 'jquery-ui',
         location: './bower_components/jquery-ui',
         main: 'jquery-ui.min'

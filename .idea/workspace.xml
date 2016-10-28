@@ -2,121 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="540b125b-24e9-4e6f-bf8f-6f1544aa5be2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/gulp/node_modules/gulp/node_modules/gulp-cli/CHANGELOG.md" afterPath="$PROJECT_DIR$/static/js/gulp/node_modules/gulp/node_modules/gulp-cli/CHANGELOG.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/gulp/node_modules/gulp/node_modules/gulp-cli/LICENSE" afterPath="$PROJECT_DIR$/static/js/gulp/node_modules/gulp/node_modules/gulp-cli/LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/gulp/node_modules/gulp/node_modules/gulp-cli/README.md" afterPath="$PROJECT_DIR$/static/js/gulp/node_modules/gulp/node_modules/gulp-cli/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/gulp/node_modules/gulp/node_modules/gulp-cli/completion/README.md" afterPath="$PROJECT_DIR$/static/js/gulp/node_modules/gulp/node_modules/gulp-cli/completion/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/.bin/acorn" afterPath="$PROJECT_DIR$/node_modules/.bin/acorn" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/gulp/node_modules/.bin/acorn" afterPath="$PROJECT_DIR$/static/js/gulp/node_modules/.bin/acorn" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/dist/js/core/router/store/actions.js" afterPath="$PROJECT_DIR$/static/js/dist/js/core/router/store/actions.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/dist/js/bases/mixins/appMixin.js" afterPath="$PROJECT_DIR$/static/js/dist/js/bases/mixins/appMixin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/gulp/node_modules/.bin/atob" afterPath="$PROJECT_DIR$/static/js/gulp/node_modules/.bin/atob" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/gulp/node_modules/.bin/babylon" afterPath="$PROJECT_DIR$/static/js/gulp/node_modules/.bin/babylon" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/gulp/node_modules/gulp/node_modules/gulp-cli/completion/bash" afterPath="$PROJECT_DIR$/static/js/gulp/node_modules/gulp/node_modules/gulp-cli/completion/bash" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/gulp/node_modules/gulp/node_modules/gulp-cli/lib/shared/log/blacklistError.js" afterPath="$PROJECT_DIR$/static/js/gulp/node_modules/gulp/node_modules/gulp-cli/lib/shared/log/blacklistError.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/gulp/node_modules/.bin/browserslist" afterPath="$PROJECT_DIR$/static/js/gulp/node_modules/.bin/browserslist" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/.bin/cleancss" afterPath="$PROJECT_DIR$/node_modules/.bin/cleancss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/gulp/node_modules/.bin/cleancss" afterPath="$PROJECT_DIR$/static/js/gulp/node_modules/.bin/cleancss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/gulp/node_modules/gulp/node_modules/gulp-cli/lib/shared/cliOptions.js" afterPath="$PROJECT_DIR$/static/js/gulp/node_modules/gulp/node_modules/gulp-cli/lib/shared/cliOptions.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/dist/js/bases/mixins/compMixin.js" afterPath="$PROJECT_DIR$/static/js/dist/js/bases/mixins/compMixin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/gulp/node_modules/gulp/node_modules/gulp-cli/lib/shared/completion.js" afterPath="$PROJECT_DIR$/static/js/gulp/node_modules/gulp/node_modules/gulp-cli/lib/shared/completion.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/gulp/node_modules/.bin/dateformat" afterPath="$PROJECT_DIR$/static/js/gulp/node_modules/.bin/dateformat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/gulp/node_modules/.bin/detect-indent" afterPath="$PROJECT_DIR$/static/js/gulp/node_modules/.bin/detect-indent" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/gulp/node_modules/.bin/dev-ip" afterPath="$PROJECT_DIR$/static/js/gulp/node_modules/.bin/dev-ip" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/dist/js/bases/components/doc_section/highlight/directive.js" afterPath="$PROJECT_DIR$/static/js/dist/js/bases/components/doc_section/highlight/directive.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/gulp/node_modules/.bin/errno" afterPath="$PROJECT_DIR$/static/js/gulp/node_modules/.bin/errno" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/.bin/esparse" afterPath="$PROJECT_DIR$/node_modules/.bin/esparse" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/gulp/node_modules/.bin/esparse" afterPath="$PROJECT_DIR$/static/js/gulp/node_modules/.bin/esparse" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/.bin/esvalidate" afterPath="$PROJECT_DIR$/node_modules/.bin/esvalidate" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/gulp/node_modules/.bin/esvalidate" afterPath="$PROJECT_DIR$/static/js/gulp/node_modules/.bin/esvalidate" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/gulp/node_modules/gulp/node_modules/gulp-cli/lib/versioned/^3.7.0/log/events.js" afterPath="$PROJECT_DIR$/static/js/gulp/node_modules/gulp/node_modules/gulp-cli/lib/versioned/^3.7.0/log/events.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/gulp/node_modules/gulp/node_modules/gulp-cli/lib/versioned/^4.0.0/log/events.js" afterPath="$PROJECT_DIR$/static/js/gulp/node_modules/gulp/node_modules/gulp-cli/lib/versioned/^4.0.0/log/events.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/gulp/node_modules/gulp/node_modules/gulp-cli/lib/shared/exit.js" afterPath="$PROJECT_DIR$/static/js/gulp/node_modules/gulp/node_modules/gulp-cli/lib/shared/exit.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/gulp/node_modules/.bin/express" afterPath="$PROJECT_DIR$/static/js/gulp/node_modules/.bin/express" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/gulp/node_modules/gulp/node_modules/gulp-cli/completion/fish" afterPath="$PROJECT_DIR$/static/js/gulp/node_modules/gulp/node_modules/gulp-cli/completion/fish" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/gulp/node_modules/gulp/node_modules/gulp-cli/lib/versioned/^3.7.0/formatError.js" afterPath="$PROJECT_DIR$/static/js/gulp/node_modules/gulp/node_modules/gulp-cli/lib/versioned/^3.7.0/formatError.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/gulp/node_modules/gulp/node_modules/gulp-cli/lib/versioned/^4.0.0/formatError.js" afterPath="$PROJECT_DIR$/static/js/gulp/node_modules/gulp/node_modules/gulp-cli/lib/versioned/^4.0.0/formatError.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/gulp/node_modules/gulp/node_modules/gulp-cli/lib/shared/getBlacklist.js" afterPath="$PROJECT_DIR$/static/js/gulp/node_modules/gulp/node_modules/gulp-cli/lib/shared/getBlacklist.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/gulp/node_modules/gulp/node_modules/gulp-cli/lib/versioned/^4.0.0/log/getTask.js" afterPath="$PROJECT_DIR$/static/js/gulp/node_modules/gulp/node_modules/gulp-cli/lib/versioned/^4.0.0/log/getTask.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/dist/js/core/router/store/getters.js" afterPath="$PROJECT_DIR$/static/js/dist/js/core/router/store/getters.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/gulp/node_modules/gulp/node_modules/gulp-cli/gulp.1" afterPath="$PROJECT_DIR$/static/js/gulp/node_modules/gulp/node_modules/gulp-cli/gulp.1" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/gulp/node_modules/gulp/node_modules/gulp-cli/bin/gulp.js" afterPath="$PROJECT_DIR$/static/js/gulp/node_modules/gulp/node_modules/gulp-cli/bin/gulp.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/gulp/node_modules/.bin/gulp" afterPath="$PROJECT_DIR$/static/js/gulp/node_modules/.bin/gulp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/gulp/node_modules/gulp/node_modules/.bin/gulp" afterPath="$PROJECT_DIR$/static/js/gulp/node_modules/gulp/node_modules/.bin/gulp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/gulp/node_modules/.bin/har-validator" afterPath="$PROJECT_DIR$/static/js/gulp/node_modules/.bin/har-validator" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/gulp/node_modules/.bin/image-size" afterPath="$PROJECT_DIR$/static/js/gulp/node_modules/.bin/image-size" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/module/js/alerts/index.es6" afterPath="$PROJECT_DIR$/static/js/module/js/alerts/index.es6" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/module/js/messageCenter/index.es6" afterPath="$PROJECT_DIR$/static/js/module/js/messageCenter/index.es6" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/dist/js/apps/index.js" afterPath="$PROJECT_DIR$/static/js/dist/js/apps/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/module/js/jqGrid/doc.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/module/js/jqGrid/jqCol.es6" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/data/jqGrid-1.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/module/js/jqGrid/jqGrid.es6" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/module/js/jqGrid/template.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/bower.json" afterPath="$PROJECT_DIR$/static/js/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/gulp/gulpfile.js" afterPath="$PROJECT_DIR$/static/js/gulp/gulpfile.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/module/index.es6" afterPath="$PROJECT_DIR$/static/js/module/index.es6" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/src/apps/exhibition/index.es6" afterPath="$PROJECT_DIR$/static/js/src/apps/exhibition/index.es6" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/dist/js/apps/exhibition/index.js" afterPath="$PROJECT_DIR$/static/js/dist/js/apps/exhibition/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/dist/js/apps/introduce/index.js" afterPath="$PROJECT_DIR$/static/js/dist/js/apps/introduce/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/dist/js/bases/components/doc_section/index.js" afterPath="$PROJECT_DIR$/static/js/dist/js/bases/components/doc_section/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/dist/js/bases/components/doc_section/api/index.js" afterPath="$PROJECT_DIR$/static/js/dist/js/bases/components/doc_section/api/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/dist/js/bases/components/doc_section/api/api_prop/index.js" afterPath="$PROJECT_DIR$/static/js/dist/js/bases/components/doc_section/api/api_prop/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/dist/js/bases/components/doc_section/highlight/index.js" afterPath="$PROJECT_DIR$/static/js/dist/js/bases/components/doc_section/highlight/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/dist/js/bases/components/doc_section/section/index.js" afterPath="$PROJECT_DIR$/static/js/dist/js/bases/components/doc_section/section/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/dist/js/bases/components/header/index.js" afterPath="$PROJECT_DIR$/static/js/dist/js/bases/components/header/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/dist/js/bases/components/menu/index.js" afterPath="$PROJECT_DIR$/static/js/dist/js/bases/components/menu/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/dist/js/bases/components/menu/menuItem/index.js" afterPath="$PROJECT_DIR$/static/js/dist/js/bases/components/menu/menuItem/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/dist/js/bases/filters/index.js" afterPath="$PROJECT_DIR$/static/js/dist/js/bases/filters/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/dist/js/config/index.js" afterPath="$PROJECT_DIR$/static/js/dist/js/config/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/dist/js/core/error/index.js" afterPath="$PROJECT_DIR$/static/js/dist/js/core/error/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/dist/js/core/home/index.js" afterPath="$PROJECT_DIR$/static/js/dist/js/core/home/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/dist/js/core/router/index.js" afterPath="$PROJECT_DIR$/static/js/dist/js/core/router/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/dist/js/core/router/store/index.js" afterPath="$PROJECT_DIR$/static/js/dist/js/core/router/store/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/dist/js/core/vuex/store/index.js" afterPath="$PROJECT_DIR$/static/js/dist/js/core/vuex/store/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/gulp/node_modules/gulp/node_modules/gulp-cli/index.js" afterPath="$PROJECT_DIR$/static/js/gulp/node_modules/gulp/node_modules/gulp-cli/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/gulp/node_modules/gulp/node_modules/gulp-cli/lib/versioned/^3.7.0/index.js" afterPath="$PROJECT_DIR$/static/js/gulp/node_modules/gulp/node_modules/gulp-cli/lib/versioned/^3.7.0/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/gulp/node_modules/gulp/node_modules/gulp-cli/lib/versioned/^4.0.0/index.js" afterPath="$PROJECT_DIR$/static/js/gulp/node_modules/gulp/node_modules/gulp-cli/lib/versioned/^4.0.0/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/gulp/node_modules/gulp/node_modules/gulp-cli/lib/versioned/^4.0.0-alpha.1/index.js" afterPath="$PROJECT_DIR$/static/js/gulp/node_modules/gulp/node_modules/gulp-cli/lib/versioned/^4.0.0-alpha.1/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/gulp/node_modules/gulp/node_modules/gulp-cli/lib/versioned/^4.0.0-alpha.2/index.js" afterPath="$PROJECT_DIR$/static/js/gulp/node_modules/gulp/node_modules/gulp-cli/lib/versioned/^4.0.0-alpha.2/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/gulp/node_modules/.bin/jsesc" afterPath="$PROJECT_DIR$/static/js/gulp/node_modules/.bin/jsesc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/gulp/node_modules/.bin/json5" afterPath="$PROJECT_DIR$/static/js/gulp/node_modules/.bin/json5" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/gulp/node_modules/.bin/latest-version" afterPath="$PROJECT_DIR$/static/js/gulp/node_modules/.bin/latest-version" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/gulp/node_modules/.bin/lessc" afterPath="$PROJECT_DIR$/static/js/gulp/node_modules/.bin/lessc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/gulp/node_modules/.bin/loose-envify" afterPath="$PROJECT_DIR$/static/js/gulp/node_modules/.bin/loose-envify" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/gulp/node_modules/.bin/lt" afterPath="$PROJECT_DIR$/static/js/gulp/node_modules/.bin/lt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/dist/js/bases/components/menu/mixins/methods.js" afterPath="$PROJECT_DIR$/static/js/dist/js/bases/components/menu/mixins/methods.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/.bin/mime" afterPath="$PROJECT_DIR$/node_modules/.bin/mime" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/.bin/mkdirp" afterPath="$PROJECT_DIR$/node_modules/.bin/mkdirp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/gulp/node_modules/.bin/nodemon" afterPath="$PROJECT_DIR$/static/js/gulp/node_modules/.bin/nodemon" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/gulp/node_modules/.bin/nopt" afterPath="$PROJECT_DIR$/static/js/gulp/node_modules/.bin/nopt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/gulp/node_modules/gulp/package.json" afterPath="$PROJECT_DIR$/static/js/gulp/node_modules/gulp/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/gulp/node_modules/gulp/node_modules/gulp-cli/package.json" afterPath="$PROJECT_DIR$/static/js/gulp/node_modules/gulp/node_modules/gulp-cli/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/gulp/node_modules/gulp/node_modules/gulp-cli/completion/powershell" afterPath="$PROJECT_DIR$/static/js/gulp/node_modules/gulp/node_modules/gulp-cli/completion/powershell" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/gulp/node_modules/.bin/r.js" afterPath="$PROJECT_DIR$/static/js/gulp/node_modules/.bin/r.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/gulp/node_modules/.bin/rc" afterPath="$PROJECT_DIR$/static/js/gulp/node_modules/.bin/rc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/gulp/node_modules/gulp/node_modules/gulp-cli/lib/shared/registerExports.js" afterPath="$PROJECT_DIR$/static/js/gulp/node_modules/gulp/node_modules/gulp-cli/lib/shared/registerExports.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/gulp/node_modules/.bin/regjsparser" afterPath="$PROJECT_DIR$/static/js/gulp/node_modules/.bin/regjsparser" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/gulp/node_modules/.bin/repeating" afterPath="$PROJECT_DIR$/static/js/gulp/node_modules/.bin/repeating" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/gulp/node_modules/.bin/rimraf" afterPath="$PROJECT_DIR$/static/js/gulp/node_modules/.bin/rimraf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/dist/js/bases/mixins/routerMixin.js" afterPath="$PROJECT_DIR$/static/js/dist/js/bases/mixins/routerMixin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/gulp/node_modules/.bin/semver" afterPath="$PROJECT_DIR$/static/js/gulp/node_modules/.bin/semver" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/dist/css/sti.css" afterPath="$PROJECT_DIR$/static/js/dist/css/sti.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/gulp/node_modules/.bin/strip-indent" afterPath="$PROJECT_DIR$/static/js/gulp/node_modules/.bin/strip-indent" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/gulp/node_modules/.bin/strip-json-comments" afterPath="$PROJECT_DIR$/static/js/gulp/node_modules/.bin/strip-json-comments" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/dist/js/apps/exhibition/style.css" afterPath="$PROJECT_DIR$/static/js/dist/js/apps/exhibition/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/gulp/node_modules/gulp/node_modules/gulp-cli/lib/versioned/^4.0.0/log/syncTask.js" afterPath="$PROJECT_DIR$/static/js/gulp/node_modules/gulp/node_modules/gulp-cli/lib/versioned/^4.0.0/log/syncTask.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/gulp/node_modules/gulp/node_modules/gulp-cli/lib/versioned/^3.7.0/taskTree.js" afterPath="$PROJECT_DIR$/static/js/gulp/node_modules/gulp/node_modules/gulp-cli/lib/versioned/^3.7.0/taskTree.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/gulp/node_modules/gulp/node_modules/gulp-cli/lib/shared/log/tasks.js" afterPath="$PROJECT_DIR$/static/js/gulp/node_modules/gulp/node_modules/gulp-cli/lib/shared/log/tasks.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/gulp/node_modules/gulp/node_modules/gulp-cli/lib/versioned/^3.7.0/log/tasksSimple.js" afterPath="$PROJECT_DIR$/static/js/gulp/node_modules/gulp/node_modules/gulp-cli/lib/versioned/^3.7.0/log/tasksSimple.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/gulp/node_modules/gulp/node_modules/gulp-cli/lib/versioned/^4.0.0/log/tasksSimple.js" afterPath="$PROJECT_DIR$/static/js/gulp/node_modules/gulp/node_modules/gulp-cli/lib/versioned/^4.0.0/log/tasksSimple.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/gulp/node_modules/.bin/throttleproxy" afterPath="$PROJECT_DIR$/static/js/gulp/node_modules/.bin/throttleproxy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/gulp/node_modules/gulp/node_modules/gulp-cli/lib/shared/log/toConsole.js" afterPath="$PROJECT_DIR$/static/js/gulp/node_modules/gulp/node_modules/gulp-cli/lib/shared/log/toConsole.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/gulp/node_modules/.bin/touch" afterPath="$PROJECT_DIR$/static/js/gulp/node_modules/.bin/touch" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/.bin/uglifyjs" afterPath="$PROJECT_DIR$/node_modules/.bin/uglifyjs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/gulp/node_modules/.bin/uglifyjs" afterPath="$PROJECT_DIR$/static/js/gulp/node_modules/.bin/uglifyjs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/gulp/node_modules/.bin/user-home" afterPath="$PROJECT_DIR$/static/js/gulp/node_modules/.bin/user-home" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/gulp/node_modules/.bin/uuid" afterPath="$PROJECT_DIR$/static/js/gulp/node_modules/.bin/uuid" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/gulp/node_modules/gulp/node_modules/gulp-cli/lib/shared/log/verify.js" afterPath="$PROJECT_DIR$/static/js/gulp/node_modules/gulp/node_modules/gulp-cli/lib/shared/log/verify.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/gulp/node_modules/gulp/node_modules/gulp-cli/lib/shared/verifyDependencies.js" afterPath="$PROJECT_DIR$/static/js/gulp/node_modules/gulp/node_modules/gulp-cli/lib/shared/verifyDependencies.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/module/js/alerts/view.html" afterPath="$PROJECT_DIR$/static/js/module/js/alerts/view.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/module/js/messageCenter/view.html" afterPath="$PROJECT_DIR$/static/js/module/js/messageCenter/view.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/dist/js/core/router/viewBak.js" afterPath="$PROJECT_DIR$/static/js/dist/js/core/router/viewBak.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/gulp/node_modules/.bin/weinre" afterPath="$PROJECT_DIR$/static/js/gulp/node_modules/.bin/weinre" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/gulp/node_modules/.bin/which" afterPath="$PROJECT_DIR$/static/js/gulp/node_modules/.bin/which" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/gulp/node_modules/.bin/window-size" afterPath="$PROJECT_DIR$/static/js/gulp/node_modules/.bin/window-size" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/gulp/node_modules/gulp/node_modules/gulp-cli/completion/zsh" afterPath="$PROJECT_DIR$/static/js/gulp/node_modules/gulp/node_modules/gulp-cli/completion/zsh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/main.js" afterPath="$PROJECT_DIR$/static/js/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/dist/css/map/sti.css.map" afterPath="$PROJECT_DIR$/static/js/dist/css/map/sti.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/dist/js/apps/exhibition/view.html" afterPath="$PROJECT_DIR$/static/js/dist/js/apps/exhibition/view.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/src/apps/exhibition/view.html" afterPath="$PROJECT_DIR$/static/js/src/apps/exhibition/view.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="vue.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -137,63 +37,107 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.es6" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/js/module/js/messageCenter/index.es6">
+      <file leaf-file-name="jqGrid.es6" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/static/js/module/js/jqGrid/jqGrid.es6">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="65" column="90" selection-start-line="65" selection-start-column="72" selection-end-line="65" selection-end-column="90" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.es6" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/js/module/js/alerts/index.es6">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="53" column="77" selection-start-line="53" selection-start-column="32" selection-end-line="53" selection-end-column="77" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.less" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/static/js/module/less/alerts/style.less">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.2565445">
-              <caret line="48" column="30" selection-start-line="48" selection-start-column="30" selection-end-line="48" selection-end-column="30" />
+            <state vertical-scroll-proportion="-0.9290928">
+              <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="view.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/js/module/js/alerts/view.html">
+      <file leaf-file-name="template.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/js/module/js/jqGrid/template.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.4705882">
-              <caret line="2" column="43" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="43" />
+            <state vertical-scroll-proportion="-4.4117646">
+              <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jqGrid-1.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/data/jqGrid-1.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.es6" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/js/src/apps/exhibition/index.es6">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-15.416667">
+              <caret line="37" column="21" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ui.jqgrid-bootstrap-ui.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/js/bower_components/jqGrid/css/ui.jqgrid-bootstrap-ui.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ui.jqgrid-bootstrap.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/js/bower_components/jqGrid/css/ui.jqgrid-bootstrap.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="grid.locale-cn.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/js/bower_components/jqGrid/js/i18n/grid.locale-cn.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#!!doc" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="view.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/js/module/js/messageCenter/view.html">
+      <file leaf-file-name="doc.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/js/module/js/jqGrid/doc.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.088235">
-              <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="44" />
+            <state vertical-scroll-proportion="-4.4117646">
+              <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jqCol.es6" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/js/module/js/jqGrid/jqCol.es6">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-10.0">
+              <caret line="24" column="27" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Html5" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -205,6 +149,21 @@
         <option value="$PROJECT_DIR$/static/js/module/js/messageCenter/view.html" />
         <option value="$PROJECT_DIR$/static/js/module/js/alerts/view.html" />
         <option value="$PROJECT_DIR$/static/js/module/js/alerts/index.es6" />
+        <option value="$PROJECT_DIR$/static/js/bower.json" />
+        <option value="$PROJECT_DIR$/static/js/module/js/grid/template.html" />
+        <option value="$PROJECT_DIR$/static/js/module/js/grid/doc.html" />
+        <option value="$PROJECT_DIR$/static/js/src/apps/exhibition/view.html" />
+        <option value="$PROJECT_DIR$/static/js/module/js/grid/index.es6" />
+        <option value="$PROJECT_DIR$/static/js/gulp/gulpfile.js" />
+        <option value="$PROJECT_DIR$/static/js/main.js" />
+        <option value="$PROJECT_DIR$/static/js/module/js/jqGrid/index.es6" />
+        <option value="$PROJECT_DIR$/static/js/module/js/jqGrid/jqCol.es6.js" />
+        <option value="$PROJECT_DIR$/static/js/module/index.es6" />
+        <option value="$PROJECT_DIR$/static/js/module/js/jqGrid/template.html" />
+        <option value="$PROJECT_DIR$/static/js/module/js/jqGrid/jqCol.es6" />
+        <option value="$PROJECT_DIR$/static/js/module/js/jqGrid/doc.html" />
+        <option value="$PROJECT_DIR$/static/js/src/apps/exhibition/index.es6" />
+        <option value="$PROJECT_DIR$/static/js/module/js/jqGrid/jqGrid.es6" />
       </list>
     </option>
   </component>
@@ -216,8 +175,8 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="48" />
-    <option name="y" value="94" />
+    <option name="x" value="108" />
+    <option name="y" value="81" />
     <option name="width" value="1920" />
     <option name="height" value="1162" />
   </component>
@@ -244,7 +203,7 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -335,6 +294,62 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="apps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="apps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="exhibition" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="module" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -361,93 +376,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="less" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vue" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vue" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="module" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="less" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="alerts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vue" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vue" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="module" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vue" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vue" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="module" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="messageCenter" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -477,13 +406,173 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="alerts" />
+              <option name="myItemId" value="jqGrid" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bower_components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bower_components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jqGrid" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bower_components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jqGrid" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bower_components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jqGrid" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="i18n" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bower_components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jqGrid" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -492,6 +581,12 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="DefaultHtmlFileTemplate" value="Html5" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Workspace\sti\vue\static\data" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
@@ -524,6 +619,12 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <pass-parent-envs>true</pass-parent-envs>
+      <envs />
       <method />
     </configuration>
   </component>
@@ -538,7 +639,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="48" y="94" width="1920" height="1162" extended-state="0" />
+    <frame x="108" y="81" width="1920" height="1162" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -546,18 +647,18 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -573,7 +674,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="65" column="90" selection-start-line="65" selection-start-column="72" selection-end-line="65" selection-end-column="90" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -583,7 +684,81 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="53" column="77" selection-start-line="53" selection-start-column="32" selection-end-line="53" selection-end-column="77" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/module/less/alerts/style.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="48" column="30" selection-start-line="48" selection-start-column="30" selection-end-line="48" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/module/js/modal/index.es6">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/module/js/modal/view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/module/js/scrollspy/index.es6">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/module/js/alerts/view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="43" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="43" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/module/js/messageCenter/view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/module/js/messageCenter/index.es6">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="65" column="90" selection-start-line="65" selection-start-column="72" selection-end-line="65" selection-end-column="90" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/module/js/alerts/index.es6">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="53" column="77" selection-start-line="53" selection-start-column="32" selection-end-line="53" selection-end-column="77" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -601,7 +776,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -610,52 +785,250 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/module/js/alerts/view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.05076142">
+          <caret line="2" column="43" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="43" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/module/less/alerts/style.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.41624364">
+          <caret line="48" column="30" selection-start-line="48" selection-start-column="30" selection-end-line="48" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/module/js/modal/index.es6">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/module/js/modal/view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/module/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/module/js/messageCenter/view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.27918783">
+          <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/bower.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.470589">
+          <caret line="33" column="27" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/module/less/sti-vue.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/module/js/scrollspy/index.es6">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.0833333">
+          <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/src/_apps.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/module/js/messageCenter/doc.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/src/apps/view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/src/apps/exhibition/view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.36548224">
+          <caret line="15" column="65" selection-start-line="15" selection-start-column="65" selection-end-line="15" selection-end-column="65" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/js/module/js/alerts/index.es6">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="53" column="77" selection-start-line="53" selection-start-column="32" selection-end-line="53" selection-end-column="77" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.3388947">
+          <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/js/module/js/messageCenter/index.es6">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="65" column="90" selection-start-line="65" selection-start-column="72" selection-end-line="65" selection-end-column="90" />
+        <state vertical-scroll-proportion="-0.8333333">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/src/apps/index.es6">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.8342023">
+          <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="27" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/src/apps/introduce/index.es6">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="12" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/gulp/gulpfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.429727">
+          <caret line="383" column="19" selection-start-line="383" selection-start-column="19" selection-end-line="383" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/module/index.es6">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20855057">
+          <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/module/js/alerts/view.html">
+    <entry file="file://$PROJECT_DIR$/static/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.4705882">
-          <caret line="2" column="43" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="43" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/module/js/messageCenter/view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.088235">
-          <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="44" />
+        <state vertical-scroll-proportion="0.83415115">
+          <caret line="34" column="32" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/module/less/alerts/style.less">
+    <entry file="file://$PROJECT_DIR$/static/js/module/js/jqGrid/template.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.2565445">
-          <caret line="48" column="30" selection-start-line="48" selection-start-column="30" selection-end-line="48" selection-end-column="30" />
+        <state vertical-scroll-proportion="-4.4117646">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/bower_components/jqGrid/js/i18n/grid.locale-cn.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/module/js/jqGrid/doc.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.4117646">
+          <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/module/js/jqGrid/jqCol.es6">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.0">
+          <caret line="24" column="27" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/bower_components/jqGrid/css/ui.jqgrid-bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/bower_components/jqGrid/css/ui.jqgrid-bootstrap-ui.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/src/apps/exhibition/index.es6">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.416667">
+          <caret line="37" column="21" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/data/jqGrid-1.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/module/js/jqGrid/jqGrid.es6">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.9290928">
+          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
           <folding />
         </state>
       </provider>
