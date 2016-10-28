@@ -1,4 +1,4 @@
-define(['exports', 'text!./view.html', 'bases/mixins/appMixin', 'bases/components/doc_section/index', 'vue', 'module/sti-vue', 'text!doc/scrollspy/doc.html', 'text!doc/modal/doc.html', 'text!doc/alerts/doc.html', 'text!doc/messageCenter/doc.html', 'css!./style.css'], function (exports, _view, _appMixin, _index, _vue, _stiVue, _doc, _doc3, _doc5, _doc7) {
+define(['exports', 'text!./view.html', 'bases/mixins/appMixin', 'bases/components/doc_section/index', 'vue', 'module/sti-vue', 'text!doc/scrollspy/doc.html', 'text!doc/modal/doc.html', 'text!doc/alerts/doc.html', 'text!doc/messageCenter/doc.html', 'text!doc/map/doc.html', 'css!./style.css'], function (exports, _view, _appMixin, _index, _vue, _stiVue, _doc, _doc3, _doc5, _doc7, _doc9) {
     'use strict';
 
     Object.defineProperty(exports, "__esModule", {
@@ -23,17 +23,19 @@ define(['exports', 'text!./view.html', 'bases/mixins/appMixin', 'bases/component
 
     var _doc8 = _interopRequireDefault(_doc7);
 
+    var _doc10 = _interopRequireDefault(_doc9);
+
     function _interopRequireDefault(obj) {
         return obj && obj.__esModule ? obj : {
             default: obj
         };
     }
 
-    var _StiVue$modal = _stiVue2.default.modal,
-        modal = _StiVue$modal.modal,
-        modalheader = _StiVue$modal.modalheader,
-        modalbody = _StiVue$modal.modalbody,
-        modalfooter = _StiVue$modal.modalfooter;
+    var _StiVue$modal = _stiVue2.default.modal;
+    var modal = _StiVue$modal.modal;
+    var modalheader = _StiVue$modal.modalheader;
+    var modalbody = _StiVue$modal.modalbody;
+    var modalfooter = _StiVue$modal.modalfooter;
     exports.default = {
 
         data: function data() {
@@ -55,7 +57,8 @@ define(['exports', 'text!./view.html', 'bases/mixins/appMixin', 'bases/component
             scrollspyDoc: _doc2.default,
             modalDoc: _doc4.default,
             alertsDoc: _doc6.default,
-            messageCenterDoc: _doc8.default
+            messageCenterDoc: _doc8.default,
+            mapDoc: _doc10.default
         },
 
         components: {
@@ -65,7 +68,8 @@ define(['exports', 'text!./view.html', 'bases/mixins/appMixin', 'bases/component
             modalbody: modalbody,
             modalfooter: modalfooter,
             alerts: _stiVue2.default.alerts,
-            messageCenter: _stiVue2.default.messageCenter
+            messageCenter: _stiVue2.default.messageCenter,
+            map: _stiVue2.default.map
         },
 
         created: function created() {
