@@ -14,7 +14,8 @@ export default {
     props: {
         //触发事件的偏移量
         offset: {
-            default: 80
+            default: 80,
+            required: true
         },
 
         //激活的区域

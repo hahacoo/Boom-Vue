@@ -1,4 +1,4 @@
-define(['exports', 'text!./view.html', 'bases/mixins/appMixin', 'bases/components/doc_section/index', 'vue', 'module/sti-vue', 'text!doc/scrollspy/doc.html', 'text!doc/modal/doc.html', 'text!doc/alerts/doc.html', 'css!./style.css'], function (exports, _view, _appMixin, _index, _vue, _stiVue, _doc, _doc3, _doc5) {
+define(['exports', 'text!./view.html', 'bases/mixins/appMixin', 'bases/components/doc_section/index', 'vue', 'jquery', 'module/sti-vue', 'text!doc/scrollspy/doc.html', 'text!doc/modal/doc.html', 'text!doc/alerts/doc.html', 'css!./style.css', 'highcharts'], function (exports, _view, _appMixin, _index, _vue, _jquery, _stiVue, _doc, _doc3, _doc5) {
     'use strict';
 
     Object.defineProperty(exports, "__esModule", {
@@ -12,6 +12,8 @@ define(['exports', 'text!./view.html', 'bases/mixins/appMixin', 'bases/component
     var _index2 = _interopRequireDefault(_index);
 
     var _vue2 = _interopRequireDefault(_vue);
+
+    var _jquery2 = _interopRequireDefault(_jquery);
 
     var _stiVue2 = _interopRequireDefault(_stiVue);
 
@@ -27,11 +29,11 @@ define(['exports', 'text!./view.html', 'bases/mixins/appMixin', 'bases/component
         };
     }
 
-    var _StiVue$modal = _stiVue2.default.modal,
-        modal = _StiVue$modal.modal,
-        modalheader = _StiVue$modal.modalheader,
-        modalbody = _StiVue$modal.modalbody,
-        modalfooter = _StiVue$modal.modalfooter;
+    var _StiVue$modal = _stiVue2.default.modal;
+    var modal = _StiVue$modal.modal;
+    var modalheader = _StiVue$modal.modalheader;
+    var modalbody = _StiVue$modal.modalbody;
+    var modalfooter = _StiVue$modal.modalfooter;
     exports.default = {
 
         data: function data() {
@@ -85,6 +87,10 @@ define(['exports', 'text!./view.html', 'bases/mixins/appMixin', 'bases/component
                 this.$broadcast('alert', message, type);
             }
 
+        },
+
+        ready: function ready() {
+            (0, _jquery2.default)(this.$el).highcharts();
         }
     };
 });

@@ -9,7 +9,15 @@ require.config({
         doc: 'module/js'
     },
     
-    shim: {},
+    shim: {
+        'jquery': {
+            exports: '$'
+        },
+        'highcharts': {
+            deps: ['jquery'],
+            exports: '$'
+        }
+    },
 
     packages: [{
         name: 'd3',
@@ -38,7 +46,7 @@ require.config({
     }, {
         name: 'vue',
         location: './bower_components/vue/dist',
-        main: 'vue.min'
+        main: 'vue'
     }, {
         name: 'vuex',
         location: './bower_components/vuex/dist',
