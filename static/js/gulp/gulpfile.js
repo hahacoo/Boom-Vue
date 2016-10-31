@@ -380,7 +380,8 @@ function webpackBundle(done) {
 			//  on the global var jQuery
 			//  第三方库不出现在最后的打包文件中
 			//  不推荐使用第三方库，如需添加在这里添加
-			"jquery": "jquery"
+			"jquery": "jquery",
+			"highcharts": "highcharts"
 		},
 		plugins: [
 			//提取公用组件

@@ -6,10 +6,19 @@ require.config({
         components: 'dist/js/components',
         core: 'dist/js/core',
         module: 'dist/module',
-        doc: 'module/js'
+        doc: 'module/js',
+        highcharts: 'bower_components/highcharts/highcharts'
     },
     
-    shim: {},
+    shim: {
+        'jquery': {
+            exports: '$'
+        },
+        'highcharts': {
+            deps: ['jquery'],
+            exports : "Highcharts"
+        },
+    },
 
     packages: [{
         name: 'd3',
@@ -55,10 +64,6 @@ require.config({
         name: 'vue-strap',
         location: './bower_components/vue-strap',
         main: 'dist/vue-strap'
-    }, {
-        name: 'highcharts',
-        location: './bower_components/highcharts',
-        main: 'highcharts'
     }, {
         name: 'moment',
         location: './bower_components/moment',

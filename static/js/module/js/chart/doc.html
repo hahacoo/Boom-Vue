@@ -1,0 +1,95 @@
+<doc-section title="stiChart" sub-title="by liushuangshuang">
+
+    <p slot="description">
+    </p>
+
+    <div slot="example">
+        <!-- 告警等级统计 -->
+        <sti-chart 
+            :tooltip-formatter="tooltipFormatter"
+            y-axis-title="数量"
+            title="水果的消耗量"
+            data-labels-color="#000"
+            chart-type="pie"
+            :data-labels-enabled="true"
+            :data-labels-style="{textShadow:'none'}"
+            data-labels-format="{key}:{y}"
+            :allow-decimals="false">
+        </sti-chart>
+
+        <!-- TOP10目的地址统计 -->
+        <!-- <sti-chart 
+            :tooltip-formatter="tooltipFormatter"
+            y-axis-title="数量"
+            title="水果的消耗量"
+            data-labels-color="#000"
+            chart-type="column"
+            stacking="normal"
+            :data-labels-enabled="true"
+            :data-labels-style="{textShadow:'none'}"
+            :allow-decimals="false"
+            legend-align="right"
+            legend-layout="vertical"
+            legend-vertical-align="middle">
+        </sti-chart> -->
+
+        <!-- <sti-chart 
+            :tooltip-formatter="tooltipFormatter"
+            y-axis-title="数量"
+            title="水果的消耗量"
+            data-labels-color="#000"
+            chart-type="bar"
+            :legend-enabled="false"
+            :data-labels-enabled="true"
+            :data-labels-style="{textShadow:'none'}"
+            :allow-decimals="false">
+        </sti-chart> -->
+    </div>
+
+    <doc-highlight type="html">
+        <sti-chart 
+            :tooltip-formatter="tooltipFormatter"
+            y-axis-title="数量"
+            title="水果的消耗量"
+            data-labels-color="#000"
+            chart-type="pie"
+            :data-labels-enabled="true"
+            :data-labels-style="{textShadow:'none'}"
+            data-labels-format="{key}:{y}"
+            :allow-decimals="false"
+            v-pre >
+        </sti-chart>
+    </doc-highlight>
+
+    <!--props描述-->
+    <doc-api>
+        <doc-prop name="tooltipFormatter" type="Function" default="" desc="tooltip formatter hook">
+        </doc-prop>
+        <doc-prop name="yAxisTitle" type="string" default="" desc="yAxis title">
+        </doc-prop>
+        <doc-prop name="title" type="String" default="" desc="chart title">
+        </doc-prop>
+        <doc-prop name="dataLabelsEnabled" type="Boolean" default="false" desc="whether to enable dataLabels or not">
+        </doc-prop>
+        <doc-prop name="chartType" type="String" default="line" desc="chart type supports 'line', 'column', 'bar', 'pie'">
+        </doc-prop>
+        <doc-prop name="dataLabelsColor" type="String" default="" desc="the color of dataLabels">
+        </doc-prop>
+        <doc-prop name="dataLabelsStyle" type="Object" default="" desc="the style of dataLabelsStyle">
+        </doc-prop>
+        <doc-prop name="dataLabelsFormat" type="String" default="{y}" desc="the dataLabels format">
+        </doc-prop>
+        <doc-prop name="allowDecimals" type="Boolean" default="true" desc="whether to allow decimal of yAxis">
+        </doc-prop>
+    </doc-api>
+    
+    <!--事件描述-->
+    <doc-api type="event">
+        <doc-prop name="STI.chart.initSeries" args="series, single" desc="初始化系列参数，不重新绘制图形">
+        </doc-prop>
+        <doc-prop name="STI.chart.redraw" args="" desc="重新绘制图形">
+        </doc-prop>
+        <doc-prop name="STI.chart.setXAxisCategory" args="category" desc="设置X轴的category参数">
+        </doc-prop>
+    </doc-api>
+</doc-section>

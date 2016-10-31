@@ -1,4 +1,4 @@
-define(['exports', 'text!./view.html', 'bases/mixins/appMixin', 'bases/components/doc_section/index', 'vue', 'module/sti-vue', 'text!doc/scrollspy/doc.html', 'text!doc/modal/doc.html', 'text!doc/alerts/doc.html', 'text!doc/messageCenter/doc.html', 'css!./style.css'], function (exports, _view, _appMixin, _index, _vue, _stiVue, _doc, _doc3, _doc5, _doc7) {
+define(['exports', 'text!./view.html', 'bases/mixins/appMixin', 'bases/components/doc_section/index', 'vue', 'module/sti-vue', 'text!doc/scrollspy/doc.html', 'text!doc/modal/doc.html', 'text!doc/alerts/doc.html', 'text!doc/messageCenter/doc.html', 'text!doc/chart/doc.html', 'css!./style.css'], function (exports, _view, _appMixin, _index, _vue, _stiVue, _doc, _doc3, _doc5, _doc7, _doc9) {
     'use strict';
 
     Object.defineProperty(exports, "__esModule", {
@@ -23,17 +23,19 @@ define(['exports', 'text!./view.html', 'bases/mixins/appMixin', 'bases/component
 
     var _doc8 = _interopRequireDefault(_doc7);
 
+    var _doc10 = _interopRequireDefault(_doc9);
+
     function _interopRequireDefault(obj) {
         return obj && obj.__esModule ? obj : {
             default: obj
         };
     }
 
-    var _StiVue$modal = _stiVue2.default.modal,
-        modal = _StiVue$modal.modal,
-        modalheader = _StiVue$modal.modalheader,
-        modalbody = _StiVue$modal.modalbody,
-        modalfooter = _StiVue$modal.modalfooter;
+    var _StiVue$modal = _stiVue2.default.modal;
+    var modal = _StiVue$modal.modal;
+    var modalheader = _StiVue$modal.modalheader;
+    var modalbody = _StiVue$modal.modalbody;
+    var modalfooter = _StiVue$modal.modalfooter;
     exports.default = {
 
         data: function data() {
@@ -55,7 +57,8 @@ define(['exports', 'text!./view.html', 'bases/mixins/appMixin', 'bases/component
             scrollspyDoc: _doc2.default,
             modalDoc: _doc4.default,
             alertsDoc: _doc6.default,
-            messageCenterDoc: _doc8.default
+            messageCenterDoc: _doc8.default,
+            highchartDoc: _doc10.default
         },
 
         components: {
@@ -65,7 +68,8 @@ define(['exports', 'text!./view.html', 'bases/mixins/appMixin', 'bases/component
             modalbody: modalbody,
             modalfooter: modalfooter,
             alerts: _stiVue2.default.alerts,
-            messageCenter: _stiVue2.default.messageCenter
+            messageCenter: _stiVue2.default.messageCenter,
+            stiChart: _stiVue2.default.chart
         },
 
         created: function created() {
@@ -76,6 +80,15 @@ define(['exports', 'text!./view.html', 'bases/mixins/appMixin', 'bases/component
             this.$on('section.attach', function (id) {
                 this.demos.push(id);
             });
+
+            // stiChart demo related code
+            this.getStiChartData();
+            // this.tooltipFormatter = function() {
+            //     return this.key + "占比: " + this.percentage.toFixed(2);
+            // }
+            this.tooltipFormatter = function () {
+                return this.series.name + "<br/>" + this.key + ": " + this.y;
+            };
         },
 
 
@@ -95,8 +108,58 @@ define(['exports', 'text!./view.html', 'bases/mixins/appMixin', 'bases/component
 
             addMessage: function addMessage(message) {
                 this.$broadcast('sti.mcenter.add', message);
-            }
+            },
 
+            getStiChartData: function getStiChartData() {
+                var _this = this;
+
+                // 告警等级统计
+                $.getJSON("/app/mock/chart/pie").then(function (res) {
+                    setTimeout(function () {
+                        _this.$broadcast("STI.chart.initSeries", { data: res.data });
+                        _this.$broadcast("STI.chart.redraw");
+                    }, 2000);
+                });
+
+                // $.getJSON("/app/mock/chart/top10").then(res => {
+                //     setTimeout(() => {
+                //         let data = res.data;
+                //         let category = [];
+                //         let series = data.map(val => {
+                //             val.data.forEach(item => {
+                //                 item.y = item.doc_count;
+                //                 item.name = item.key;
+                //             });
+                //             category.push(val.name = val.series);
+                //             return val;
+                //         });
+
+                //         this.$broadcast("STI.chart.initSeries", series, false);
+                //         // this.$broadcast("STI.chart.setXAxisCategory", category);
+                //         this.$broadcast("STI.chart.redraw");
+                //     }, 2000);
+                // });
+
+                // type bar json
+                // $.getJSON("/app/mock/chart/bar").then(res => {
+                //     setTimeout(() => {
+                //         let data = res.data;
+                //         let category = [];
+                //         let values = data.map(val => {
+                //             return {
+                //                 name: val.key,
+                //                 y: val.value
+                //             }
+                //         });
+
+                //         this.$broadcast("STI.chart.initSeries", {
+                //             data: values,
+                //             color: "#fe7c5c"
+                //         });
+                //         this.$broadcast("STI.chart.redraw");
+                //     }, 2000);
+                // });
+            }
         }
     };
 });
