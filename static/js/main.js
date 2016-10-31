@@ -4,9 +4,11 @@ require.config({
     paths: {
         bases:  'dist/js/bases',
         components: 'dist/js/components',
+        bower : 'bower_components',
         core: 'dist/js/core',
         module: 'dist/module',
-        doc: 'module/js'
+        doc: 'module/js',
+        highcharts: 'bower_components/highcharts/highcharts'
     },
     
     shim: {
@@ -15,6 +17,13 @@ require.config({
         },
         'highcharts': {
             deps: ['jquery'],
+        },
+        'jquery-ui': {
+            deps: ['jquery'],
+            exports: '$'
+        },
+        'jqgrid' : {
+            deps: ['jquery-ui'],
             exports: '$'
         }
     },
@@ -28,6 +37,10 @@ require.config({
         location: './bower_components/jquery',
         main: 'dist/jquery'
     }, {
+        name: 'jqgrid',
+        location: './bower_components/jqGrid/js',
+        main: 'jquery.jqGrid.min'
+    },{
         name: 'jquery-ui',
         location: './bower_components/jquery-ui',
         main: 'jquery-ui.min'
@@ -64,26 +77,22 @@ require.config({
         location: './bower_components/vue-strap',
         main: 'dist/vue-strap'
     }, {
-        name: 'highcharts',
-        location: './bower_components/highcharts',
-        main: 'highcharts'
-    }, {
         name: 'moment',
         location: './bower_components/moment',
         main: 'moment'
-    },{
+    }, {
         name: 'noty',
         location: './bower_components/noty/',
         main: 'js/noty/packaged/jquery.noty.packaged.min'
-    },{
+    }, {
         name: 'Switchery',
         location: './bower_components/switchery',
         main: 'dist/switchery'
-    },{
+    }, {
         name: 'pathtoregexp',
         location: './bower_components/pathtoregexp',
         main: 'pathtoregexp'
-    },{
+    }, {
         name: 'highlightjs',
         location: './bower_components/highlightjs',
         main: 'highlight.pack.js'

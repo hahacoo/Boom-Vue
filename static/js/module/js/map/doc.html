@@ -1,0 +1,35 @@
+<!-- 将自己的组件介绍包括在doc-section，分别包括title、subtitle、description、example-->
+<doc-section title="Map" sub-title="by baiquanwei">
+    <!-- 标题-->
+    <p slot="description">
+        
+    </p>
+    <!-- 例子-->
+    <div slot="example">
+        <!-- <button type="button" class="btn btn-error" @click="addAlert('错误error', 'error')">error</button>
+        <button type="button" class="btn btn-success" @click="addAlert('成功success', 'success')">成功success</button>
+        <button type="button" class="btn btn-info" @click="addAlert('信息info', 'info')">info</button>
+        <button type="button" class="btn btn-warning" @click="addAlert('警告warning', 'warning')">warning</button>
+        <button type="button" class="btn btn-success" @click="addAlert('默认是success')">默认</button> -->
+
+       <!--  <alerts></alerts> -->
+       <map :width="830" :height="500"></map>
+
+    </div>
+    <!-- 代码或者其他api注释-->
+    <doc-highlight type="html">
+        <map v-pre :width="830" :height="500"></map>
+    </doc-highlight>
+
+    <doc-highlight type="javascript">
+    </doc-highlight>
+    
+    <!--props描述-->
+    <doc-api>
+        <doc-prop name="width" type="String" default="200" desc="svg宽度">
+        </doc-prop>
+        <doc-prop name="height" type="String" default="200" desc="svg高度">
+        </doc-prop>
+    </doc-api>
+    
+</doc-section>

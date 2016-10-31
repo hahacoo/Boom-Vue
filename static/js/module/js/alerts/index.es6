@@ -1,4 +1,3 @@
-// define(['text!./view.html', 'vue', 'css!./style.css'], function (view, vue) {
 /**
  * alerts
  * 取代noty的信息提示组件，从右上角弹出并且缩回
@@ -11,39 +10,66 @@ export default  {
 
     template,
 
-    props: ['maxAlert'],
+    props: {
+        /**
+         *
+         */
+        alertShow: false,
+        max: {
+            type: Number,
+            default: 5
+        },
+
+        /**
+         * 消息有效存在的时间
+         */
+        live : {
+
+        }
+    },
 
     data: function () {
         return {
-            maxAlert: this.maxAlert || 5,
             alertList: []
         }
     },
 
-    ready: function () {
-
+    events: {
+        'sti.alert.add': function (message, type) {
+            this.add(message, type);
+        }
     },
 
-    events: {
-        'alert': function (message, type) {
-            this.addAlert(message, type);
+    computed: {
+        alertShow: function () {
+            return this.alertList.length > 0;
         }
     },
 
     methods: {
 
-        addAlert: function (message, type) {
-            if (this.alertList.length == this.maxAlert) {
-                this.alertList.shift();
+        add: function (message, type) {
+            if (this.alertList.length >= this.max) {
+                this.alertList.splice(0, this.alertList.length - this.max + 1);
             }
-            this.alertList.push({'message': message, 'type': type ||'success'});
+            this.alertList.push({'message': message, 'type': this.typeFormatter(type ||'success')});
         },
 
-        delAlert: function (index) {
-            this.alertList.splice(index, 1);
+        typeFormatter: function (type) {
+            return 'alert-' + type;
+        },
+
+        remove: function (item) {
+            this.alertList.$remove(item);
         }
 
+    },
+
+    computed : {
+
+        empty () {
+            return this.items.length > 0
+        }
     }
 
 };
-// });
