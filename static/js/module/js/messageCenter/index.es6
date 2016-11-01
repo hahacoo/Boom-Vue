@@ -10,50 +10,53 @@ export default  {
 
     template,
 
+    props : {
+        'initOpen' : {
+            type : Boolean,
+            default : false
+        }
+    },
+
     data: function () {
         return {
             name: '消息中心',
             mcenterShow: false,
-            messages: [
-                {
-                    text: '你刚刚登出了系统你刚刚登出了系统你刚刚登出了系统你刚刚登出了系统',
-                    type: 'success',
-                    time: 1477306539000
-                }, {
-                    text: 'this is a testtest test testtest. this is a testtest test testtest. this is a testtest test testtest',
-                    type: 'success',
-                    time: 1477306753000
-                }, {
-                    text: '你刚刚登出了系统',
-                    type: 'success',
-                    time: 1477306539000
-                }, {
-                    text: '你刚刚登陆了系统',
-                    type: 'success',
-                    time: 1477306753000
-                }, {
-                    text: '你刚刚登出了系统',
-                    type: 'success',
-                    time: 1477306539000
-                }, {
-                    text: '你刚刚登陆了系统',
-                    type: 'success',
-                    time: 1477306753000
-                }
-            ]
+            messages: []
         }
     },
 
     events: {
+
+        /**
+         * 添加消息
+         * @param text
+         * @param type 默认值
+         */
         'sti.mcenter.add': function (text, type) {
             this.addMessage(text, type);
         },
+
+        /**
+         * 打开消息中心界面
+         * @param value
+         */
         'sti.mcenter.open': function (value) {
             this.mcenterShow = !!value;
         }
     },
 
     methods: {
+
+        /**
+         *
+         */
+        open () {
+
+        },
+
+        close() {
+
+        },
 
         getLocalTime: function (timestamp) {     
             return new Date(parseInt(timestamp)).toLocaleString();     

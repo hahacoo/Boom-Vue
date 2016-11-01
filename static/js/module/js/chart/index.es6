@@ -136,7 +136,7 @@ export default {
 
 		"STI.chart.redraw": "redraw",
 
-		"STI.chart.setXAxisCategory": "setXAxisCategoryfunction",
+		"STI.chart.setXAxisCategory": "setXAxisCategory",
 	},
 
 	methods: {

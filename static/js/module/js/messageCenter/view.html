@@ -1,19 +1,22 @@
-<div class="mcenter-wrap" v-if="mcenterShow" keep-alive>
-    <div class="mcenter-header">
+<aside class="mcenter-wrap" v-if="mcenterShow" keep-alive>
+    <header class="mcenter-header">
         {{name}}
         <span class="mcenter-close" @click="mcenterShow=false">&times;</span>
-    </div>
+    </header>
+
     <div class="mcenter-content-wrap">
         <div class="mcenter-content">
-            <div v-for="m in messages" class="mcenter-message" :class="'mcenter-message-' + m.type">
-                <div class="mcenter-message-header">
+
+            <section v-for="m in messages" class="mcenter-message" :class="'mcenter-message-' + m.type">
+                <header class="mcenter-message-header">
                     {{getLocalTime(m.time)}}
                     <span class="mcenter-message-close" @click="removeMessage($index)">&times;</span>
-                </div>
-                <div class="mcentrt-message-centent">
+                </header>
+                <p class="mcentrt-message-centent">
                     {{m.text}}
-                </div>
-            </div>
+                </p>
+            </section>
+
         </div>
     </div>
-</div>
+</aside>

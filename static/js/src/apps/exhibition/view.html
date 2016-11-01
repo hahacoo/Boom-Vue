@@ -1,9 +1,11 @@
 <div class="exhibition">
-    <scrollspy offset="200" :active.sync="demoId" selector=">.container>.row>.col-md-9>[id]">
+    <scrollspy offset="200" :active.sync="demoId" selector=".container>.row>.col-md-9>[id]">
         <div class="container">
             <div class="row">
                 <!-- 组件展示区-->
                 <div class="col-md-9">
+
+                    <partial name="gridDoc"></partial>
 
                     <partial name="scrollspy-doc"></partial>
                     
@@ -12,6 +14,7 @@
                     <partial name="alerts-doc"></partial>
 
                     <partial name="message-center-doc"></partial>
+                    <partial name="map-doc"></partial>
 
                     <partial name="highchart-doc"></partial>
 
