@@ -348,7 +348,7 @@ function webpackBundle(done) {
 			library: 'StiVue', //导出lib库的名称
 			libraryTarget: 'umd' //导出lib库的类型 var、this、commonjs、amd、umd
 		},
-		watch: true, //监听文件变化
+		watch: true, //监听文件变化,默认开启cache
 		devtool: 'cheap-source-map', //sourcemap生成方式
 		module: {
 			noParse: /\.doc\.html$/, //不需要webpack管理的文件路径
@@ -505,6 +505,6 @@ gulp.task('browserifyBundle', moduleBundle)
 process.on('uncaughtException', function (e) {
 
 	//删除空文件uncaughtException，暂时无法解决，官方说4.0已解决，目前仍存在
-	//暂时无法杀死服务器进程，先通过异常捕获，阻止gulp经常异常结束
+	//暂时没有找到杀死服务器进程的方法，先通过异常捕获，阻止gulp进程异常结束
 	util.log(util.colors.red(e))
 });
