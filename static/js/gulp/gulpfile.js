@@ -28,7 +28,8 @@ var gulp = require("gulp"),
 	source = require('vinyl-source-stream'),
 	buffer = require('vinyl-buffer'),
 	streamify = require('vinyl-buffer'),
-	standalonify = require('standalonify');
+	standalonify = require('standalonify'),
+	kill = require('tree-kill');
 
 //gulp插件
 var util = require('gulp-util'), //gulputil插件
@@ -54,6 +55,10 @@ var webpack = require("webpack");
 
 //读取配置信息
 var _config = {};
+
+var processes = {
+	server: null
+}
 
 try {
 	_config = yaml.safeLoad(fs.readFileSync(path.join(__dirname, '_config.yml'), 'utf8'))
@@ -211,7 +216,7 @@ function ssh() {
 function bootstrap(done) {
 	var started = false;
 
-	return nodemon({
+	processes.server = nodemon({
 		script: server.bin, //启动脚本
 		watch: server.path //监控文件
 	}).on('start', function() {
@@ -230,6 +235,8 @@ function bootstrap(done) {
 		util.log(util.colors.bgBlue('**server exited**'))
 		util.log(util.colors.cyan('******************'))
 	})
+
+	return processes.server
 }
 
 /**
@@ -491,5 +498,13 @@ gulp.task('publish', ssh)
 //默认task，编译--创建服务--热替换
 gulp.task('default', gulp.series('complie', bootstrap, hotReload, watch))
 
-//上传服务器
-gulp.task('babel', moduleBundle)
+//browserify打包
+gulp.task('browserifyBundle', moduleBundle)
+
+//捕获异常
+process.on('uncaughtException', function (e) {
+
+	//删除空文件uncaughtException，暂时无法解决，官方说4.0已解决，目前仍存在
+	//暂时无法杀死服务器进程，先通过异常捕获，阻止gulp经常异常结束
+	util.log(util.colors.red(e))
+});
