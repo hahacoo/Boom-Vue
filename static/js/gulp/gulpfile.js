@@ -391,7 +391,8 @@ function webpackBundle(done) {
 			"jquery": "jquery",
 			"jqgrid" : "jqgrid",
 			"highcharts": "highcharts",
-			"d3": "d3"
+			"d3": "d3",
+			"moment": "moment",
 		},
 		plugins: [
 			//提取公用组件

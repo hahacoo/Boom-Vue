@@ -4,7 +4,6 @@ import template from 'text!./view.html';
 import appMixin from 'bases/mixins/appMixin';
 import docSection from 'bases/components/doc_section/index';
 
-
 import Vue from 'vue';
 import $ from 'jquery';
 import 'highcharts';
@@ -18,7 +17,8 @@ import scrollspyDoc from 'text!doc/scrollspy/doc.html'
 import modalDoc from 'text!doc/modal/doc.html'
 import alertsDoc from 'text!doc/alerts/doc.html'
 import messageCenterDoc from 'text!doc/messageCenter/doc.html'
-import highchartDoc from "text!doc/chart/doc.html";
+import highchartDoc from "text!doc/chart/doc.html"
+import timelineDoc from "text!doc/timeline/doc.html"
 
 import gridDoc from 'text!doc/jqGrid/doc.html'
 
@@ -33,7 +33,10 @@ export default {
             demos: [],
             demoId: '',
             
-            isModalShow: false
+            isModalShow: false,
+
+            // sti timeline
+            duration: "1d"
         }
     },
 
@@ -48,7 +51,8 @@ export default {
         messageCenterDoc,
         highchartDoc,
         gridDoc,
-        mapDoc
+        mapDoc,
+        timelineDoc,
     },
 
     components: {
@@ -59,7 +63,7 @@ export default {
         jqGrid : StiVue.jqGrid,
         jqCol : StiVue.jqCol,
         map: StiVue.map,
-        modal: StiVue.modal
+        timeline: StiVue.timeline,
     },
 
     created (){
