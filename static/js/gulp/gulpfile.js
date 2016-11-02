@@ -28,7 +28,8 @@ var gulp = require("gulp"),
 	source = require('vinyl-source-stream'),
 	buffer = require('vinyl-buffer'),
 	streamify = require('vinyl-buffer'),
-	standalonify = require('standalonify');
+	standalonify = require('standalonify'),
+	kill = require('tree-kill');
 
 //gulp插件
 var util = require('gulp-util'), //gulputil插件
@@ -54,6 +55,10 @@ var webpack = require("webpack");
 
 //读取配置信息
 var _config = {};
+
+var processes = {
+	server: null
+}
 
 try {
 	_config = yaml.safeLoad(fs.readFileSync(path.join(__dirname, '_config.yml'), 'utf8'))
@@ -211,7 +216,7 @@ function ssh() {
 function bootstrap(done) {
 	var started = false;
 
-	return nodemon({
+	processes.server = nodemon({
 		script: server.bin, //启动脚本
 		watch: server.path //监控文件
 	}).on('start', function() {
@@ -230,6 +235,8 @@ function bootstrap(done) {
 		util.log(util.colors.bgBlue('**server exited**'))
 		util.log(util.colors.cyan('******************'))
 	})
+
+	return processes.server
 }
 
 /**
@@ -341,7 +348,7 @@ function webpackBundle(done) {
 			library: 'StiVue', //导出lib库的名称
 			libraryTarget: 'umd' //导出lib库的类型 var、this、commonjs、amd、umd
 		},
-		watch: true, //监听文件变化
+		watch: true, //监听文件变化,默认开启cache
 		devtool: 'cheap-source-map', //sourcemap生成方式
 		module: {
 			noParse: /\.doc\.html$/, //不需要webpack管理的文件路径
@@ -382,11 +389,9 @@ function webpackBundle(done) {
 			//  第三方库不出现在最后的打包文件中
 			//  不推荐使用第三方库，如需添加在这里添加
 			"jquery": "jquery",
-<<<<<<< HEAD
-			"jqgrid" : "jqgrid"
-=======
+			"jqgrid" : "jqgrid",
+			"highcharts": "highcharts",
 			"d3": "d3"
->>>>>>> 7dde7130789ef20f78ce4a96ba1384c4fc9615a9
 		},
 		plugins: [
 			//提取公用组件
@@ -493,5 +498,13 @@ gulp.task('publish', ssh)
 //默认task，编译--创建服务--热替换
 gulp.task('default', gulp.series('complie', bootstrap, hotReload, watch))
 
-//上传服务器
-gulp.task('babel', moduleBundle)
+//browserify打包
+gulp.task('browserifyBundle', moduleBundle)
+
+//捕获异常
+process.on('uncaughtException', function (e) {
+
+	//删除空文件uncaughtException，暂时无法解决，官方说4.0已解决，目前仍存在
+	//暂时没有找到杀死服务器进程的方法，先通过异常捕获，阻止gulp进程异常结束
+	util.log(util.colors.red(e))
+});

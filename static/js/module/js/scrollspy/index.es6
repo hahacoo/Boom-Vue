@@ -4,17 +4,13 @@
  * by zhangdi
  */
 import template from './view.html'
-import $ from 'jquery';
 
 export default {
-    data: function() {
-        return {}
-    },
 
     props: {
         //触发事件的偏移量
         offset: {
-            default: 80
+            default: 80,
         },
 
         //激活的区域
@@ -35,16 +31,14 @@ export default {
                 let valNum = +val,
                     unitReg = /^\d+(px|%)$/ig
 
-                if(valNum === valNum) {
+                if(valNum == val) {
                     //数值
                     return valNum + 'px'
-                } else if(unitReg.test(val)) {
+                }
+                if(unitReg.test(val)) {
                     //像素值或者百分比
                     return val
-                } else {
-                    return null
                 }
-                
             }
         },
 
@@ -53,7 +47,7 @@ export default {
             type: String,
             default: function() {
 
-                return '>[' + this.indicate + ']'
+                return '[' + this.indicate + ']'
             }
         }
     },
@@ -62,16 +56,19 @@ export default {
 
     ready() {
 
-        let container = $(this.$el),
-            indicates = container.find(this.selector);
+        let container = this.$el,
+            indicates = this.$el.querySelectorAll(this.selector);
 
+        /**
+         * 计算相对于容器的top距离
+         * @param  {[type]} dom [description]
+         * @return {[type]}     [description]
+         */
         function getOffsetTop(dom) {
             let top = dom.offsetTop,
                 parent = dom.offsetParent;
 
-            while(parent !== null) {
-                if(parent === container[0]) break
-
+            while(parent !== container) {
                 top += parent.offsetTop
                 parent = parent.offsetParent
             }
@@ -79,6 +76,7 @@ export default {
             return top
         }
 
+        //滚动事件
         let scrollHandler = (function(fn, delay) {
             let timer = null,
                 first = true;
@@ -86,6 +84,7 @@ export default {
             return function() {
 
                 if(first) {
+                    //第一次
                     fn()
                     first = false;
                 }
@@ -106,9 +105,10 @@ export default {
                 length = indicates.length;
 
             //滚动距离
-            let scrollTop = container[0].scrollTop,
-                clientHeight = container[0].clientHeight,
-                scrollHeight = container[0].scrollHeight;
+            let scrollTop = container.scrollTop,
+                clientHeight = container.clientHeight,
+                scrollHeight = container.scrollHeight;
+
             for(;i<length;i++) {
                 //相对于容器的距离
                 let offsetTop = getOffsetTop(indicates[i]);
@@ -137,6 +137,6 @@ export default {
         }.bind(this), 0)
 
         //注册滚动事件
-        container.on('scroll', scrollHandler)
+        container.onscroll = scrollHandler
     }
 }

@@ -11,17 +11,12 @@ export default  {
     template,
 
     props: {
-<<<<<<< HEAD
         /**
          *
          */
-        max: {
-            type : Number,
-=======
         alertShow: false,
         max: {
             type: Number,
->>>>>>> 7dde7130789ef20f78ce4a96ba1384c4fc9615a9
             default: 5
         },
 
@@ -53,17 +48,9 @@ export default  {
 
     methods: {
 
-<<<<<<< HEAD
-        add : function (message, type) {
-            let len = this.items.length
-
-            if (this.alertList.length >= this.maxAlert) {
-                this.alertList.splice(0, this.alertList.length - this.maxAlert + 1);
-=======
         add: function (message, type) {
             if (this.alertList.length >= this.max) {
                 this.alertList.splice(0, this.alertList.length - this.max + 1);
->>>>>>> 7dde7130789ef20f78ce4a96ba1384c4fc9615a9
             }
             this.alertList.push({'message': message, 'type': this.typeFormatter(type ||'success')});
         },
@@ -72,17 +59,8 @@ export default  {
             return 'alert-' + type;
         },
 
-<<<<<<< HEAD
-        remove : function (index) {
-            this.alertList.splice(index, 1);
-        },
-
-        addStyle (item) {
-            item.className = "" + item.type;
-=======
         remove: function (item) {
             this.alertList.$remove(item);
->>>>>>> 7dde7130789ef20f78ce4a96ba1384c4fc9615a9
         }
 
     },

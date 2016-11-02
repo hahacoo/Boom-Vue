@@ -31,6 +31,7 @@
     "vuex": "~0.8.2",
     "pathtoregexp": "~1.0.3",
     "highlightjs": "^9.7.0",
+    "highcharts": "~4.2.3",
     "jqGrid": "jqgrid#^5.1.1"
   },
   "ignore": [
