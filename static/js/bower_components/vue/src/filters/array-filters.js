@@ -70,7 +70,7 @@ export function filterBy (arr, search, delimiter) {
 }
 
 /**
- * Order filter for arrays
+ * Filter filter for arrays
  *
  * @param {String|Array<String>|Function} ...sortKeys
  * @param {Number} [order]

@@ -105,7 +105,7 @@ function linkAndCapture (linker, vm) {
   var originalDirCount = vm._directives.length
   linker()
   var dirs = vm._directives.slice(originalDirCount)
-  sortDirectives(dirs)
+  dirs.sort(directiveComparator)
   for (var i = 0, l = dirs.length; i < l; i++) {
     dirs[i]._bind()
   }
@@ -113,37 +113,16 @@ function linkAndCapture (linker, vm) {
 }
 
 /**
- * sort directives by priority (stable sort)
+ * Directive priority sort comparator
  *
- * @param {Array} dirs
+ * @param {Object} a
+ * @param {Object} b
  */
-function sortDirectives (dirs) {
-  if (dirs.length === 0) return
 
-  var groupedMap = {}
-  var i, j, k, l
-  var index = 0
-  var priorities = []
-  for (i = 0, j = dirs.length; i < j; i++) {
-    var dir = dirs[i]
-    var priority = dir.descriptor.def.priority || DEFAULT_PRIORITY
-    var array = groupedMap[priority]
-    if (!array) {
-      array = groupedMap[priority] = []
-      priorities.push(priority)
-    }
-    array.push(dir)
-  }
-
-  priorities.sort(function (a, b) {
-    return a > b ? -1 : a === b ? 0 : 1
-  })
-  for (i = 0, j = priorities.length; i < j; i++) {
-    var group = groupedMap[priorities[i]]
-    for (k = 0, l = group.length; k < l; k++) {
-      dirs[index++] = group[k]
-    }
-  }
+function directiveComparator (a, b) {
+  a = a.descriptor.def.priority || DEFAULT_PRIORITY
+  b = b.descriptor.def.priority || DEFAULT_PRIORITY
+  return a > b ? -1 : a === b ? 0 : 1
 }
 
 /**
@@ -263,16 +242,10 @@ export function compileRoot (el, options, contextOptions) {
       })
     if (names.length) {
       var plural = names.length > 1
-
-      var componentName = options.el.tagName.toLowerCase()
-      if (componentName === 'component' && options.name) {
-        componentName += ':' + options.name
-      }
-
       warn(
         'Attribute' + (plural ? 's ' : ' ') + names.join(', ') +
         (plural ? ' are' : ' is') + ' ignored on component ' +
-        '<' + componentName + '> because ' +
+        '<' + options.el.tagName.toLowerCase() + '> because ' +
         'the component is a fragment instance: ' +
         'http://vuejs.org/guide/components.html#Fragment-Instance'
       )
@@ -334,10 +307,6 @@ function compileElement (el, options) {
   // textarea treats its text content as the initial value.
   // just bind it as an attr directive for value.
   if (el.tagName === 'TEXTAREA') {
-    // a textarea which has v-pre attr should skip complie.
-    if (getAttr(el, 'v-pre') !== null) {
-      return skip
-    }
     var tokens = parseText(el.value)
     if (tokens) {
       el.setAttribute(':value', tokensToExp(tokens))
@@ -673,7 +642,7 @@ function makeTerminalNodeLinkFn (el, dirName, value, options, def, rawName, arg,
     modifiers: modifiers,
     def: def
   }
-  // check ref for v-for, v-if and router-view
+  // check ref for v-for and router-view
   if (dirName === 'for' || dirName === 'router-view') {
     descriptor.ref = findRef(el)
   }

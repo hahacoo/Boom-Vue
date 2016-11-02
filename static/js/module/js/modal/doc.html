@@ -2,21 +2,27 @@
 <doc-section title="Modal" sub-title="by manghao">
     <div slot="example">
         <button type="button" class="btn btn-primary" @click="showModal">点我</button>
-        <modal :if-show.sync="isModalShow" :can-click-blank="false">
-            <modalheader slot="header" title="我是标题" :if-show-arrow="true"></modalheader>
-            <modalbody slot="body">
-                我是内容内容内容
-            </modalbody>
-            <modalfooter slot="footer" close-content="关闭" save-content="保存"></modalfooter>
+        <modal :dialog-model="true"
+            title="标题1">
+            <h2>今天星期一</h2>
+            <div>也许吧</div>
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+            </ul>
         </modal>
     </div>
     <doc-highlight type="html">
-        <modal :if-show.sync="isModalShow" :can-click-blank="false" v-pre>
-        <modalheader slot="header" title="我是标题" :if-show-arrow="true"></modalheader>
-        <modalbody slot="body">
-            我是内容内容内容
-        </modalbody>
-        <modalfooter slot="footer" close-content="关闭" save-content="保存"></modalfooter>
-    </modal>
+        <modal :dialog-model="true"
+            title="标题1" v-pre>
+            <h2>今天星期一</h2>
+            <div>也许吧</div>
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+            </ul>
+        </modal>
     </doc-highlight>
 </doc-section>

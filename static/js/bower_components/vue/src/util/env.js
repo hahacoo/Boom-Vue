@@ -1,4 +1,4 @@
-/* globals MutationObserver */
+/* global MutationObserver */
 
 // can we use __proto__?
 export const hasProto = '__proto__' in {}
@@ -16,7 +16,12 @@ const UA = inBrowser && window.navigator.userAgent.toLowerCase()
 export const isIE = UA && UA.indexOf('trident') > 0
 export const isIE9 = UA && UA.indexOf('msie 9.0') > 0
 export const isAndroid = UA && UA.indexOf('android') > 0
-export const isIOS = UA && /iphone|ipad|ipod|ios/.test(UA)
+export const isIos = UA && /(iphone|ipad|ipod|ios)/i.test(UA)
+export const iosVersionMatch = isIos && UA.match(/os ([\d_]+)/)
+export const iosVersion = iosVersionMatch && iosVersionMatch[1].split('_')
+
+// detecting iOS UIWebView by indexedDB
+export const hasMutationObserverBug = iosVersion && Number(iosVersion[0]) >= 9 && Number(iosVersion[1]) >= 3 && !window.indexedDB
 
 let transitionProp
 let transitionEndEvent
@@ -52,11 +57,6 @@ export {
   animationEndEvent
 }
 
-/* istanbul ignore next */
-function isNative (Ctor) {
-  return /native code/.test(Ctor.toString())
-}
-
 /**
  * Defer a task to execute it asynchronously. Ideally this
  * should be executed as a microtask, so we leverage
@@ -68,57 +68,39 @@ function isNative (Ctor) {
  */
 
 export const nextTick = (function () {
-  const callbacks = []
-  let pending = false
-  let timerFunc
-
+  var callbacks = []
+  var pending = false
+  var timerFunc
   function nextTickHandler () {
     pending = false
-    const copies = callbacks.slice(0)
-    callbacks.length = 0
-    for (let i = 0; i < copies.length; i++) {
+    var copies = callbacks.slice(0)
+    callbacks = []
+    for (var i = 0; i < copies.length; i++) {
       copies[i]()
     }
   }
 
-  // the nextTick behavior leverages the microtask queue, which can be accessed
-  // via either native Promise.then or MutationObserver.
-  // MutationObserver has wider support, however it is seriously bugged in
-  // UIWebView in iOS >= 9.3.3 when triggered in touch event handlers. It
-  // completely stops working after triggering a few times... so, if native
-  // Promise is available, we will use it:
   /* istanbul ignore if */
-  if (typeof Promise !== 'undefined' && isNative(Promise)) {
-    var p = Promise.resolve()
-    var noop = function () {}
-    timerFunc = () => {
-      p.then(nextTickHandler)
-      // in problematic UIWebViews, Promise.then doesn't completely break, but
-      // it can get stuck in a weird state where callbacks are pushed into the
-      // microtask queue but the queue isn't being flushed, until the browser
-      // needs to do some other work, e.g. handle a timer. Therefore we can
-      // "force" the microtask queue to be flushed by adding an empty timer.
-      if (isIOS) setTimeout(noop)
-    }
-  } else if (typeof MutationObserver !== 'undefined') {
-    // use MutationObserver where native Promise is not available,
-    // e.g. IE11, iOS7, Android 4.4
+  if (typeof MutationObserver !== 'undefined' && !hasMutationObserverBug) {
     var counter = 1
     var observer = new MutationObserver(nextTickHandler)
-    var textNode = document.createTextNode(String(counter))
+    var textNode = document.createTextNode(counter)
     observer.observe(textNode, {
       characterData: true
     })
-    timerFunc = () => {
+    timerFunc = function () {
       counter = (counter + 1) % 2
-      textNode.data = String(counter)
+      textNode.data = counter
     }
   } else {
-    // fallback to setTimeout
-    /* istanbul ignore next */
-    timerFunc = setTimeout
+    // webpack attempts to inject a shim for setImmediate
+    // if it is used as a global, so we have to work around that to
+    // avoid bundling unnecessary code.
+    const context = inBrowser
+      ? window
+      : typeof global !== 'undefined' ? global : {}
+    timerFunc = context.setImmediate || setTimeout
   }
-
   return function (cb, ctx) {
     var func = ctx
       ? function () { cb.call(ctx) }
@@ -132,7 +114,7 @@ export const nextTick = (function () {
 
 let _Set
 /* istanbul ignore if */
-if (typeof Set !== 'undefined' && isNative(Set)) {
+if (typeof Set !== 'undefined' && Set.toString().match(/native code/)) {
   // use native Set when available.
   _Set = Set
 } else {

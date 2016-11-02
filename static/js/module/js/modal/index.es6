@@ -1,79 +1,105 @@
 /*
  * modal 拟态窗
  * @param: 
- *  ifShow——是否显示拟态窗；
- *  canClickBlank——单击空白区域是否关闭
+ *  dialogModel
+ *  title
+ *  closeContent
+ *  saveContent
  * by menghao
  */
 import template from './view.html'
-import modalheader from './comps/header/index'
-import modalbody from './comps/body/index'
-import modalfooter from './comps/footer/index'
 
-var modal = {
+export default {
     data: function() {
         return {
-
+            /**
+             * 控制modal窗口的显示
+             */
+            'shown': false
         }
     },
 
     template,
     
-    props: {
-
-        //
-        'title' : {
-
-        },
-
-        'initShow' : {
-
-        },
-
-        'shown': {
+    props: {      
+        /**
+         * 控制modal是否能够点击背景，以及是否显示右上角XX
+         * dialogModel : false
+         */
+        'dialogModel': {
             default: true
         },
 
         /**
-         *
-         * dialogModel : false
+         * 标题
+         * 可传入string和number
          */
-        'canClickBlank': {
-            default: true
+        'title': {
+            type: [String, Number],
+            default: ''
+        },
+
+        /**
+         * 左侧按钮
+         * 可传入string和number
+         */
+        'closeContent': {
+            type: [String, Number],
+            default: '关闭'
+        },
+
+        /**
+         * 右侧按钮
+         * 可传入string和number
+         */
+        'saveContent': {
+            type: [String, Number],
+            default: '保存'
         }
     },
+
+    events: {
+        /*
+         * 监听显示modal的事件，可从外部调用
+         */
+        'sti.modal.open' () {
+            this.open()
+        },
+    },
+
     methods: {
-        clickBlank: function(e){
-            if (!this.canClickBlank) {
+        /*
+         * 点击背景事件
+         */
+        clickBackground (e){
+            if (!this.dialogModel) {
                 return;
             }
 
             if (e.target == e.currentTarget) {
-                this.ifShow = false;
-                this.closeEvent();
+                this.close();
             }
         },
 
-        close: function() {
-            this.ifShow = false;
-            this.closeEvent();
+        /*
+         * 关闭事件
+         */
+        close () {
+            this.shown = false;
+            this.dispatchCloseEvent();
         },
 
+        /*
+         * 显示modal事件
+         */
         open () {
-
+            this.shown = true;
+            this.$dispatch('sti.modal.event', 'modal open')
         },
 
-        //一个关闭的事件
-        closeEvent: function(){
-            console.log('窗口关闭')
+        //通知关闭的事件
+        dispatchCloseEvent (){
+            this.$dispatch('sti.modal.event', 'modal close')
         }
     }
-
-}
-
-export default {
-    modal,
-    modalheader,
-    modalbody,
-    modalfooter
 }

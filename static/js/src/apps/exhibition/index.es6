@@ -24,7 +24,6 @@ import gridDoc from 'text!doc/jqGrid/doc.html'
 
 import mapDoc from 'text!doc/map/doc.html'
 
-let {modal, modalheader, modalbody, modalfooter} = StiVue.modal
 export default {
 
     data: function() {
@@ -54,16 +53,13 @@ export default {
 
     components: {
         scrollspy: StiVue.scrollspy,
-        modal,
-        modalheader,
-        modalbody,
-        modalfooter,
         alerts: StiVue.alerts,
         messageCenter: StiVue.messageCenter,
         stiChart: StiVue.chart,
         jqGrid : StiVue.jqGrid,
         jqCol : StiVue.jqCol,
-        map: StiVue.map
+        map: StiVue.map,
+        modal: StiVue.modal
     },
 
     created (){
@@ -82,13 +78,18 @@ export default {
         // }
         this.tooltipFormatter = function() {
             return this.series.name + "<br/>" + this.key + ": " + this.y;
-        }
+        };
+
+        //监听modal dispatch的事件
+        this.$on('sti.modal.event', function(message) {
+            console.log(message);
+        });
     },
 
     methods: {
 
         showModal: function() {
-            this.isModalShow = !this.isModalShow;
+            this.$broadcast('sti.modal.open');
         },
 
         addAlert: function (message, type) {
