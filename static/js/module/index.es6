@@ -9,6 +9,7 @@ import chart from './js/chart/index.es6'
 import jqGrid from './js/jqGrid/jqGrid.es6'
 import jqCol from './js/jqGrid/jqCol.es6'
 import map from './js/map/index.es6'
+import timeline from './js/timeline/index.es6'
 
 export default {
     jqGrid,
@@ -18,6 +19,7 @@ export default {
     alerts,
     messageCenter,
     chart,
-    map
+    map,
+    timeline,
 }
 

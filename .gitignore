@@ -9,4 +9,5 @@ static/js/gulp/node_modules/
 
 static/js/dist/module
 static/js/dist/
+static/js/npm-debug.log
 
