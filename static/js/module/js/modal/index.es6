@@ -20,9 +20,24 @@ var modal = {
     template,
     
     props: {
-        'ifShow': {
+
+        //
+        'title' : {
+
+        },
+
+        'initShow' : {
+
+        },
+
+        'shown': {
             default: true
-        }, 
+        },
+
+        /**
+         *
+         * dialogModel : false
+         */
         'canClickBlank': {
             default: true
         }
@@ -42,6 +57,10 @@ var modal = {
         close: function() {
             this.ifShow = false;
             this.closeEvent();
+        },
+
+        open () {
+
         },
 
         //一个关闭的事件
