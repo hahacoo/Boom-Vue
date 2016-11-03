@@ -19,17 +19,17 @@
     <doc-highlight type="html">
     <!-- 需要高亮显示的部分如果是自定义组件，受vue解析顺序的影响，要使用v-pre阻止vue解析，才能保证显示-->
     <alerts v-pre></alerts>
-    <button type="button" class="btn btn-error" @click="addAlert('错误error', 'error')">error</button>
-    <button type="button" class="btn btn-success" @click="addAlert('成功success', 'success')">success</button>
-    <button type="button" class="btn btn-info" @click="addAlert('信息info', 'info')">info</button>
-    <button type="button" class="btn btn-warning" @click="addAlert('警告warning', 'warning')">warning</button>
-    <button type="button" class="btn btn-success" @click="addAlert('默认是success')">默认</button>
+    <button type="button" class="btn btn-error" @click="addAlert('错误danger', 'danger')" v-pre>错误danger</button>
+    <button type="button" class="btn btn-success" @click="addAlert('成功success', 'success')" v-pre>成功success</button>
+    <button type="button" class="btn btn-info" @click="addAlert('信息info', 'info')" v-pre>信息info</button>
+    <button type="button" class="btn btn-warning" @click="addAlert('警告warning', 'warning')" v-pre>警告warning</button>
+    <button type="button" class="btn btn-success" @click="addAlert('默认success')" v-pre>默认success</button>
     </doc-highlight>
 
     <doc-highlight type="javascript">
         <!-- 需要高亮显示的部分如果是自定义组件，受vue解析顺序的影响，要使用v-pre阻止vue解析，才能保证显示-->
-    showAlert: function (message, type) {
-        this.$broadcast("alert", message, type);
+    addAlert: function (message, type) {
+        this.$broadcast('sti.alert.add', message, type);
     }
     </doc-highlight>
     
