@@ -64,6 +64,7 @@ export default {
         jqCol : StiVue.jqCol,
         map: StiVue.map,
         timeline: StiVue.timeline,
+        modal: StiVue.modal
     },
 
     created (){
