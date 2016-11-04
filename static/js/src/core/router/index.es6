@@ -44,13 +44,15 @@ let router = {
          * @param  {String} path   [description]
          * @param  {String} comp   [description]
          * @param  {Object} params [description]
+         * @param  {Object} hash   [description]
          * @return {[type]}        [description]
          */
-        function updateView (app='', path='', comp='', params={}) {
+        function updateView (app='', path='', comp='', params={}, hash='') {
             this.updateApp(app)
             this.updatePath(path)
             this.updateComp(comp)
             this.updateParams(params)
+            this.updateHash(hash)
         }
 
         /**
@@ -63,6 +65,7 @@ let router = {
                 any = ctx.params.any,
                 path = ctx.path.replace(/^\/|\/$/g, ''),
                 querystring = ctx.querystring,
+                hash = ctx.hash,
                 params = {};
 
             //处理path，获取当前组件
@@ -136,14 +139,14 @@ let router = {
                     //刷新视图
                     //先将视图切换为空白视图
                     //之后在切回原始图，实现刷新效果
-                    updateView.call(this, app, path, 'view-bak', params)
+                    updateView.call(this, app, path, 'view-bak', params, hash)
 
                     this.$nextTick(() => {
-                        updateView.call(this, app, path, comp, params)
+                        updateView.call(this, app, path, comp, params, hash)
                     }, 0)
 
                 } else {
-                    updateView.call(this, app, path, comp, params)
+                    updateView.call(this, app, path, comp, params, hash)
                 }
             } else {
 
@@ -164,14 +167,14 @@ let router = {
                         //刷新视图
                         //先将视图切换为空白视图
                         //之后在切回原始图，实现刷新效果
-                        updateView.call(this, app, path, 'view-bak', params)
+                        updateView.call(this, app, path, 'view-bak', params, hash)
 
                         this.$nextTick(() => {
-                            updateView.call(this, app, path, comp, params)
+                            updateView.call(this, app, path, comp, params, hash)
                         }, 0)
 
                     } else {
-                        updateView.call(this, app, path, comp, params)
+                        updateView.call(this, app, path, comp, params, hash)
                     }
                 }.bind(this));
             }

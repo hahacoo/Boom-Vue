@@ -8,7 +8,8 @@ const state = {
   app: '',
   path: '',
   component: '',
-  params: {}
+  params: {},
+  hash: ''
 }
 
 // 创建一个对象存储路由状态mutation函数
@@ -27,6 +28,10 @@ const mutations = {
 
   UPDATEPARAMS (state, params) {
     state.params = params
+  },
+
+  UPDATEHASH (state, hash) {
+    state.hash = hash
   }
 }
 

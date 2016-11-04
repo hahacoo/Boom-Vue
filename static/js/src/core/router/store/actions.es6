@@ -38,3 +38,13 @@ export const updateComp = function ({ dispatch }, comp) {
 export const updateParams = function ({ dispatch }, params) {
   dispatch('UPDATEPARAMS', params)
 }
+
+
+/**
+ * 更新请求hash
+ * @param  {[type]} options.dispatch 事件的分发对象
+ * @return {[type]}                  [description]
+ */
+export const updateHash = function ({ dispatch }, hash) {
+  dispatch('UPDATEHASH', hash)
+}

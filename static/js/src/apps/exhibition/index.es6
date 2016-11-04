@@ -31,7 +31,7 @@ export default {
             defaultView: '',
             activeId: 'fat',
             demos: [],
-            demoId: '',
+            demoId: 'Scrollspy',
             
             isModalShow: false,
 
@@ -65,30 +65,6 @@ export default {
         map: StiVue.map,
         timeline: StiVue.timeline,
         modal: StiVue.modal
-    },
-
-    created (){
-
-        //加载doc-section插件
-        Vue.use(docSection)
-
-        this.$on('section.attach', function(id) {
-            this.demos.push(id)
-        });
-
-        // stiChart demo related code
-        this.getStiChartData();
-        // this.tooltipFormatter = function() {
-        //     return this.key + "占比: " + this.percentage.toFixed(2);
-        // }
-        this.tooltipFormatter = function() {
-            return this.series.name + "<br/>" + this.key + ": " + this.y;
-        };
-
-        //监听modal dispatch的事件
-        this.$on('sti.modal.event', function(message) {
-            console.log(message);
-        });
     },
 
     methods: {
@@ -159,7 +135,34 @@ export default {
         }
     },
 
+    created (){
+
+        //加载doc-section插件
+        Vue.use(docSection)
+
+        this.$on('section.attach', function(id) {
+            this.demos.push(id)
+        });
+
+        // stiChart demo related code
+        this.getStiChartData();
+        // this.tooltipFormatter = function() {
+        //     return this.key + "占比: " + this.percentage.toFixed(2);
+        // }
+        this.tooltipFormatter = function() {
+            return this.series.name + "<br/>" + this.key + ": " + this.y;
+        };
+
+        //监听modal dispatch的事件
+        this.$on('sti.modal.event', function(message) {
+            console.log(message);
+        });
+    },
+
     ready () {
-        $(this.$el).highcharts()
+
+        this.$nextTick(function() {
+            $('a[href = #' + this.globalHash + ']')[0].click()
+        })
     }
 };

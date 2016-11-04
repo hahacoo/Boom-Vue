@@ -36,3 +36,12 @@ export const globalParams = function (state) {
   return state.router.params
 }
 
+/**
+ * 获取当前hash值
+ * @param  {[type]} state 路由状态存储对象
+ * @return {[type]}       [description]
+ */
+export const globalHash = function (state) {
+  return state.router.hash
+}
+
