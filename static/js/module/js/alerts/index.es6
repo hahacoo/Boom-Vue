@@ -40,12 +40,6 @@ export default  {
         }
     },
 
-    computed: {
-        alertShow: function () {
-            return this.alertList.length > 0;
-        }
-    },
-
     methods: {
 
         add: function (message, type) {
@@ -67,9 +61,10 @@ export default  {
 
     computed : {
 
-        empty () {
-            return this.items.length > 0
+        empty: function () {
+            return this.alertList.length > 0;
         }
+        
     }
 
 };
