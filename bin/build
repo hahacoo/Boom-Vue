@@ -1,16 +1,7 @@
-var yaml = require('js-yaml'),
-	fs  = require('fs')
-	path = require('path')
+var path = require('path')
 
 //存取配置信息
-var _config = {}
-
-try{
-  _config = yaml.safeLoad(fs.readFileSync(path.join(__dirname, '../_config.yml'), 'utf8'))
-} catch(e) {
-    console.log('初始化配置信息错误,请检查根目录下的_config.yml是否正确');
-    console.log(e);
-}
+var _config = require('../loadConfig')(path.join(__dirname, '../_config.yml'))
 
 var chalk = require('chalk'),
 	minimist = require('minimist'),
