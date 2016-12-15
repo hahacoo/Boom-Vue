@@ -1,16 +1,130 @@
-# app配置
-name: awesome_app
-title: awesome_app
+##########################
+# express服务器配置文件 v1.0
+##########################
+
+# 应用信息
+name: boom_app
+title: boom-vue
 
 # 模板引擎
 views: views/ejs
 engine: ejs
 
-# 端口号
+# 本地服务端口port，默认3000端口
 port: 3000
 
-# proxy
+# proxy，以下请求将会被转发到其他服务器上
 proxy:
   enable: false
   baseUrl: /app
+  # 目标服务器
   target: localhost:4000
+  # 请求地址，支持通配符
+  rules:
+
+# 参数配置
+buildArgs: 
+  string: [tool, mode] 
+  alias: 
+    tool: T
+    mode: M
+  default: 
+    tool: gulp
+    mode: ''
+
+##########################
+# end express
+##########################
+
+##########################
+# gulp构建配置文件 v1.0
+##########################
+
+# 模板地址
+template: ../../static/js/src/layout.ejs
+# html文件输出 相对webpack编译后的地址
+outputPath:
+  html: ../../../views/ejs/index.ejs
+
+# 默认参数配置
+argOptions: 
+  # 字符串或者数组, 参数值是否已字符串返回
+  string: [mode] 
+  # boolean: 字符串或者数组，参数值是否已boolean值返回
+  # 设置别名
+  alias: 
+    mode: M
+  # 默认值
+  default: 
+    mode: develop
+
+# 服务信息
+server:
+  # 启动express脚步
+  bin: ../../bin/www
+  # nodemon监控文件
+  path: 
+    - ../../bin
+    - ../../routes
+    - ../../views
+    - ../../_config.yml
+    - ../../app.js
+  # browserSync代理本地服务
+  proxy: localhost:3000
+  # browserSync端口
+  port: 7000
+  # browserSync监控文件
+  files:
+    - ../../static/**/*.*
+  # browserSync忽略监控文件
+  ignored:
+    - ../../static/js/node_components
+    - ../../static/js/src
+  browser: google chrome
+  open: true
+
+# 基础样式文件，不需要webpack处理
+base:
+  less: ../../static/css/commons/less/boom.less
+  lessPath: ../../static/css/commons/less/**/*.less
+  lessRoot: ../../static/css/commons/less
+  cssDest: ../../static/css/commons/css
+  css: ../../static/css/commons/css/boom.css
+
+# 源文件
+src:
+  # 根路径
+  root: ../../static/js/src
+  # 入口文件
+  index: ../../static/js/src/apps/index.es6
+  # node_modules路径
+  modules: ../../static/js/node_modules
+  # webpack loader路径
+  loaderMoules: node_modules
+  # alias变量
+  bases:  ../../static/js/src/bases
+  # 第三方库，单独打包
+  vendor:
+    - vue
+
+# 开发模式下发布路径
+dev:
+  root: ../../static/js/dev
+  publicPath: /static/js/dev/
+
+# 发布模式下发布路径
+pro:
+  root: ../../static/js/pro
+  publicPath: /static/js/pro/
+
+# sftp信息
+sftp:
+  host:
+  port:
+  user:
+  pass:
+  remotePath: 
+
+##########################
+# end gulp
+##########################

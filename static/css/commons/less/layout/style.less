@@ -1,0 +1,40 @@
+/**
+ * layout
+ */
+@import '../base/variables.less';
+@import '../base/mixins.less';
+
+.boom-app {
+
+	height: 100%;
+	font-size: @font-size-base;
+
+	.boom-container {
+		
+		.boom-header {
+			
+			height: @base-height;
+			line-height: @base-height;
+			background-color: @header-bg-color;
+
+			.wrap {
+
+				height: 100%;
+
+				.header-logo {
+					
+					height: 100%;
+					font-size: @header-logo-font;
+					padding-left: @header-padding-left;
+					display: inline-block;
+					background-image: url(/static/img/logo.png);
+					background-size: @header-logo-size;
+					background-repeat: no-repeat;
+					background-position: left center;
+
+					.a-reset(#000)
+				}
+			}
+		}
+	}
+}

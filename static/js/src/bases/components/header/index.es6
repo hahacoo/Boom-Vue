@@ -1,37 +1,10 @@
 /**
  * app-header
- * by zhangdi
+ * by hahacoo
  */
-import template from 'text!./view.html'
-import compMixin from 'bases/mixins/compMixin';
+import template from './view'
 
 export default {
-	data: function() {
-		return {
-			activeMenu: null 
-		}
-	},
-
-	template,
-
-	mixins: [compMixin],
-
-	methods: {
-		home: function() {
-			this.$router().show('/')
-		},
-		more: function() {
-			this.$dispatch('aside.toggle')
-		},
-		introduce: function() {
-			this.$router().show('/introduce')
-		},
-		exhibition: function() {
-			this.$router().show('/exhibition')
-		}
-	},
-
-	created: function() {
-		
-	}
+	
+	template
 }

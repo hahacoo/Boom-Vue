@@ -1,13 +1,3 @@
 *.o
-# amd/
-# bower_components/
 node_modules/
-
-# gulp intermediate storage 
-static/js/bower_components/
-static/js/gulp/node_modules/
-
-static/js/dist/module
-static/js/dist/
-static/js/npm-debug.log
-
+npm-debug.log

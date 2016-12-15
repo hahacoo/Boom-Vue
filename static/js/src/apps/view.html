@@ -1,16 +1,11 @@
-<div class="sti-container sti-horizontal">
+<div class="boom-container">
     <!-- 头部区域 -->
-    <app-header v-if="isApp || isHome"></app-header>
+    <app-header></app-header>
 
-    <template v-if="isApp">
-        <!-- 内容区-->
-        <section class="container-content sti-fadeIn">
-            <component :is="globalApp" transition="sti-fadeIn" transition-mode="out-in"></component>
-        </section>
-    </template>
-    <!--首页内容-->
-    <home v-if="isHome" class="sti-fadeInUpMin"></home>
-    <!--错误处理-->
-    <error v-if="isError"></error>
-    <!--弹窗-->
+    <div class="container">
+        
+        <h1 style="margin-top: 100px">
+            Hello, world!
+        </h1>
+    </div>
 </div>

@@ -1,0 +1,43 @@
+var yaml = require('js-yaml'),
+	fs  = require('fs')
+	path = require('path')
+
+//存取配置信息
+var _config = {}
+
+try{
+  _config = yaml.safeLoad(fs.readFileSync(path.join(__dirname, '../_config.yml'), 'utf8'))
+} catch(e) {
+    console.log('初始化配置信息错误,请检查根目录下的_config.yml是否正确');
+    console.log(e);
+}
+
+var chalk = require('chalk'),
+	minimist = require('minimist'),
+	args = minimist(process.argv.slice(2), _config.buildArgs)
+
+//构建工具地址
+var toolDir = path.join(__dirname, '../tools/' + args.tool)
+
+//切换进程目录
+process.chdir(toolDir)
+
+var child_process = require('child_process'),
+	build = child_process.spawn(args.tool, ['--mode', args.mode])
+
+//执行监听
+build.stdout.on('data', function(data){
+
+	process.stdout.write(chalk.green('boom:build ') + chalk.cyan(data))
+})
+
+//错误监听
+build.stderr.on('data', function(data){
+
+	process.stderr.write(chalk.magenta('boom:exception ') 
+		+ String(data).replace(/^(\w*Error):(.*)$/mg, function(errorinfo, type, messge){
+
+			return chalk.bgRed(type) + chalk.red(messge)
+		})
+	)
+})

@@ -2,13 +2,24 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>hahacoo</title>
-<link rel="stylesheet" type="text/css" href="/static/js/bower_components/bootstrap/dist/css/bootstrap.css">
-<link rel="stylesheet" type="text/css" href="/static/js/bower_components/fontawesome/css/font-awesome.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>boom boom</title>
+<style>
+	html {
+		font-family: 'Microsoft YaHei', 微软雅黑, arial, helvetica, sans-serif
+	}
+	.container {
+
+		width: 80%;
+		margin: 0 auto;
+	}
+</style>
 </head>
 <body>
-  <h1><%= message %></h1>
-  <h2><%= error.status %></h2>
-  <pre><%- error.stack %></pre>
+	<div class="container">
+	  <h1><%= message %></h1>
+	  <h2><%= error.status %></h2>
+	  <pre><%- error.stack %></pre>
+  	<div></div>
 </body>
 </html>

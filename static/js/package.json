@@ -1,0 +1,15 @@
+{
+  "name": "boom-fontend",
+  "version": "1.0.0",
+  "description": "- **apps** app组件\r - **bases** 基础服务\r \t- **components** 全局组件\r \t- **directives** 全局指令\r \t- **filters** 全局过滤器\r \t- **mixins** 混入文件\r \t- **partials** html片段\r \t- **transitions** 全局动画钩子函数\r - **config** 全局配置信息\r - **core** 核心代码\r \t- **error** 错误页面处理\r \t- **home** 首页\r \t- **router** 路由控制\r \t- **service** 基础服务\r - **module** 组件池",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "zhangdi525@163.com",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "vue": "^1.0.24"
+  }
+}
